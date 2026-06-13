@@ -1,0 +1,274 @@
+aid: usgs-water
+name: USGS Water Services
+description: >-
+  The U.S. Geological Survey (USGS) National Water Information System (NWIS)
+  exposes a suite of REST APIs providing access to real-time and historical water
+  data from over 1.5 million monitoring locations across the United States and
+  territories. The legacy WaterServices APIs (being decommissioned in early 2027)
+  and the next-generation api.waterdata.usgs.gov OGC-compliant APIs together
+  cover streamflow, groundwater levels, water quality, site metadata, and
+  statistical summaries. All services are free, publicly funded, and require no
+  authentication for standard use; API keys are available at no cost for higher
+  rate-limit access.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: Public
+created: '2026-06-13'
+modified: '2026-06-13'
+position: Producer
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/usgs-water/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+tags:
+  - Water
+  - Streamflow
+  - Groundwater
+  - Water Quality
+  - Hydrology
+  - Environmental
+  - USGS
+  - NWIS
+  - Government
+  - Open Data
+  - OGC
+apis:
+  - aid: usgs-water:instantaneous-values
+    name: USGS Instantaneous Values Service
+    description: >-
+      Provides near real-time water data — streamflow, gage height, temperature,
+      specific conductance, and hundreds of other parameters — from thousands of
+      USGS monitoring sites. Values are typically recorded every 15 minutes and
+      transmitted hourly. Data is available from October 1, 2007 onwards and is
+      marked provisional until reviewed.
+    humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
+    baseURL: https://waterservices.usgs.gov/nwis/iv/
+    tags:
+      - Real-Time
+      - Streamflow
+      - Gage Height
+      - Water Parameters
+      - Time Series
+    properties:
+      - type: Documentation
+        url: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
+      - type: Website
+        url: https://waterservices.usgs.gov/
+
+  - aid: usgs-water:daily-values
+    name: USGS Daily Values Service
+    description: >-
+      Returns historical summarized daily hydrologic data (mean, median, maximum,
+      minimum) for streams, lakes, estuaries, and wells. Many sites have more than
+      10 years of record. Supports WaterML 1.1, WaterML 2.0, RDB (tab-delimited),
+      and JSON output formats.
+    humanURL: https://waterservices.usgs.gov/docs/dv-service/daily-values-service-details/
+    baseURL: https://waterservices.usgs.gov/nwis/dv/
+    tags:
+      - Daily Values
+      - Historical Data
+      - Streamflow
+      - Hydrology
+      - WaterML
+    properties:
+      - type: Documentation
+        url: https://waterservices.usgs.gov/docs/dv-service/daily-values-service-details/
+      - type: Website
+        url: https://waterservices.usgs.gov/
+
+  - aid: usgs-water:site-service
+    name: USGS Site Service
+    description: >-
+      Searches and retrieves metadata for millions of USGS hydrologic data collection
+      sites including streams, springs, wells, lakes, reservoirs, estuaries, and
+      glaciers. Filtering options include site number, state, HUC, bounding box, county,
+      site type, and parameter codes. Outputs include tab-delimited, KML, and GeoJSON.
+    humanURL: https://waterservices.usgs.gov/docs/site-service/site-service-details/
+    baseURL: https://waterservices.usgs.gov/nwis/site/
+    tags:
+      - Site Metadata
+      - Monitoring Locations
+      - Geospatial
+      - NWIS
+    properties:
+      - type: Documentation
+        url: https://waterservices.usgs.gov/docs/site-service/site-service-details/
+      - type: Website
+        url: https://waterservices.usgs.gov/
+
+  - aid: usgs-water:statistics-service
+    name: USGS Statistics Service
+    description: >-
+      Retrieves daily, monthly, or annual statistics (mean, minimum, maximum, median,
+      and percentiles P05–P95) computed from approved historical time-series data.
+      Supports up to 10 sites per request and returns data in RDB tab-delimited format.
+    humanURL: https://waterservices.usgs.gov/docs/statistics/statistics-details/
+    baseURL: https://waterservices.usgs.gov/nwis/stats/
+    tags:
+      - Statistics
+      - Percentiles
+      - Historical
+      - Streamflow
+      - Approved Data
+    properties:
+      - type: Documentation
+        url: https://waterservices.usgs.gov/docs/statistics/statistics-details/
+      - type: Website
+        url: https://waterservices.usgs.gov/
+
+  - aid: usgs-water:groundwater-levels
+    name: USGS Groundwater Levels Service
+    description: >-
+      Provides historical manually-recorded groundwater level measurements from USGS
+      wells and monitoring sites. Returns depth-to-water and water-level-above-datum
+      values in JSON or RDB format. For automated real-time groundwater data, the
+      Instantaneous Values Service should be used.
+    humanURL: https://waterservices.usgs.gov/docs/groundwater-levels/groundwater-levels-details/
+    baseURL: https://waterservices.usgs.gov/nwis/gwlevels/
+    tags:
+      - Groundwater
+      - Water Levels
+      - Wells
+      - Aquifers
+      - Historical
+    properties:
+      - type: Documentation
+        url: https://waterservices.usgs.gov/docs/groundwater-levels/groundwater-levels-details/
+      - type: Website
+        url: https://waterservices.usgs.gov/
+
+  - aid: usgs-water:ogc-continuous-values
+    name: USGS OGC Continuous Values API
+    description: >-
+      Next-generation OGC API compliant service (api.waterdata.usgs.gov) providing
+      real-time continuous sensor measurements including streamflow, gage height, and
+      hundreds of other parameters. Implements OGC API – Features standard with CQL2
+      filtering, spatial bounding-box queries, and temporal filtering. Supports JSON,
+      HTML, CSV, and JSON-LD output formats.
+    humanURL: https://api.waterdata.usgs.gov/docs/
+    baseURL: https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous
+    tags:
+      - Real-Time
+      - OGC
+      - Streamflow
+      - Continuous Data
+      - Next Generation
+    properties:
+      - type: Documentation
+        url: https://api.waterdata.usgs.gov/docs/
+      - type: OpenAPI
+        url: https://api.waterdata.usgs.gov/ogcapi/v0/openapi?f=json
+      - type: Website
+        url: https://api.waterdata.usgs.gov/
+
+  - aid: usgs-water:ogc-daily-values
+    name: USGS OGC Daily Values API
+    description: >-
+      OGC API compliant service for historical summarized daily water data with derived
+      statistics. Part of the next-generation USGS Water Data API platform replacing
+      the legacy WaterServices (slated for decommission in early 2027). Supports
+      CQL2 filtering, geospatial queries, and multiple output formats.
+    humanURL: https://api.waterdata.usgs.gov/docs/
+    baseURL: https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily
+    tags:
+      - Daily Values
+      - OGC
+      - Historical
+      - Next Generation
+    properties:
+      - type: Documentation
+        url: https://api.waterdata.usgs.gov/docs/
+      - type: OpenAPI
+        url: https://api.waterdata.usgs.gov/ogcapi/v0/openapi?f=json
+      - type: Website
+        url: https://api.waterdata.usgs.gov/
+
+  - aid: usgs-water:ogc-monitoring-locations
+    name: USGS OGC Monitoring Locations API
+    description: >-
+      OGC API compliant service providing location details, geographic data, and site
+      identifiers for USGS monitoring stations. Returns rich metadata including
+      site type, drainage area, altitude, aquifer codes, and active parameter inventory.
+    humanURL: https://api.waterdata.usgs.gov/docs/
+    baseURL: https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations
+    tags:
+      - Monitoring Locations
+      - Site Metadata
+      - Geospatial
+      - OGC
+    properties:
+      - type: Documentation
+        url: https://api.waterdata.usgs.gov/docs/
+      - type: OpenAPI
+        url: https://api.waterdata.usgs.gov/ogcapi/v0/openapi?f=json
+      - type: Website
+        url: https://api.waterdata.usgs.gov/
+
+  - aid: usgs-water:water-quality-portal
+    name: Water Quality Portal (WQP) API
+    description: >-
+      A cooperative service sponsored by USGS and EPA providing access to water quality
+      data from over 400 agencies including USGS NWIS and EPA WQX. Endpoints cover
+      monitoring sites, chemistry results, biological metrics, activity data, and
+      detection limits. Supports spatial, temporal, characteristic, and organizational
+      filters. Output formats include CSV, TSV, XLSX, XML, GeoJSON, KML, and KMZ.
+    humanURL: https://www.waterqualitydata.us/webservices_documentation/
+    baseURL: https://www.waterqualitydata.us/data/
+    tags:
+      - Water Quality
+      - EPA
+      - Chemistry
+      - Biology
+      - Monitoring
+      - Multi-Agency
+    properties:
+      - type: Documentation
+        url: https://www.waterqualitydata.us/webservices_documentation/
+      - type: Website
+        url: https://www.waterqualitydata.us/
+
+  - aid: usgs-water:statistics-next-gen
+    name: USGS Water Data Statistics API
+    description: >-
+      Next-generation statistics API at api.waterdata.usgs.gov providing computed
+      statistical summaries for USGS water time series. Part of the platform replacing
+      the legacy WaterServices statistics endpoint.
+    humanURL: https://api.waterdata.usgs.gov/statistics/v0/docs
+    baseURL: https://api.waterdata.usgs.gov/statistics/v0/
+    tags:
+      - Statistics
+      - Next Generation
+      - Time Series
+    properties:
+      - type: Documentation
+        url: https://api.waterdata.usgs.gov/statistics/v0/docs
+      - type: Website
+        url: https://api.waterdata.usgs.gov/
+
+common:
+  - type: Website
+    url: https://waterservices.usgs.gov/
+  - type: Website
+    url: https://api.waterdata.usgs.gov/
+  - type: Documentation
+    url: https://waterservices.usgs.gov/docs/
+  - type: Documentation
+    url: https://api.waterdata.usgs.gov/docs/
+  - type: SignUp
+    url: https://api.waterdata.usgs.gov/signup/
+  - type: PrivacyPolicy
+    url: https://www.doi.gov/privacy
+  - type: TermsOfService
+    url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+  - type: Contact
+    url: mailto:wdfn@usgs.gov
+  - type: StatusPage
+    url: https://waterservices.usgs.gov/test-tools/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/usgs-water/refs/heads/main/plans/usgs-water-plans.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/usgs-water/refs/heads/main/rate-limits/usgs-water-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/usgs-water/refs/heads/main/finops/usgs-water-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

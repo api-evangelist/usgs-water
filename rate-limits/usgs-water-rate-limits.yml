@@ -1,0 +1,107 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: USGS Water Services
+providerId: usgs-water
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Water
+  - Hydrology
+  - Environmental
+  - Government
+  - Rate Limiting
+  - IP Blocking
+  - API Key
+description: >-
+  USGS Water Services (both legacy WaterServices and next-generation api.waterdata.usgs.gov)
+  implement rate limiting to prevent any single user from degrading service availability for
+  others. Anonymous (unauthenticated) users face a more conservative request ceiling;
+  registering for a free API key at api.waterdata.usgs.gov/signup/ raises that ceiling.
+  Exact numeric thresholds are not publicly published. Enforcement is via IP-level blocking
+  (HTTP 403) for excessive anonymous use. API-key users receive HTTP 429 on throttle. The
+  Water Quality Portal (waterqualitydata.us) does not publish specific limits but supports
+  POST for large queries and gzip compression to reduce round-trip load.
+sources:
+  - https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
+  - https://api.waterdata.usgs.gov/signup/
+  - https://api.waterdata.usgs.gov/docs/
+responseCodes:
+  throttled: 429
+  quotaExceeded: 403
+  serviceUnavailable: 503
+limits:
+  - tier: anonymous
+    name: Anonymous IP Limit
+    scope: ip-address
+    metric: requests
+    limit: unspecified
+    burst: unspecified
+    timeFrame: hour
+    applies:
+      - https://waterservices.usgs.gov/nwis/iv/
+      - https://waterservices.usgs.gov/nwis/dv/
+      - https://waterservices.usgs.gov/nwis/site/
+      - https://waterservices.usgs.gov/nwis/stats/
+      - https://waterservices.usgs.gov/nwis/gwlevels/
+      - https://api.waterdata.usgs.gov/ogcapi/v0/
+    description: >-
+      Conservative limit applied per IP address for unauthenticated requests. Exact
+      threshold not published. Repeated or bulk requests that impact other users result
+      in HTTP 403 (IP blocked). Blocking is typically temporary.
+
+  - tier: api-key
+    name: API Key Higher Limit
+    scope: api-key
+    metric: requests
+    limit: unspecified
+    burst: unspecified
+    timeFrame: hour
+    applies:
+      - https://api.waterdata.usgs.gov/ogcapi/v0/
+      - https://api.waterdata.usgs.gov/statistics/v0/
+    description: >-
+      Higher request ceiling for authenticated users supplying a free USGS API key
+      (header: apikey or query parameter: apikey). Exceeding the limit returns HTTP 429.
+      Exact threshold is not publicly documented; contact wdfn@usgs.gov for high-volume
+      use cases.
+
+policies:
+  - name: Minimal Footprint
+    description: >-
+      Always specify the minimum amount of data needed in each request using built-in
+      filters (site codes, parameter codes, date ranges, bounding boxes). Never attempt
+      to retrieve all available data in a single call.
+  - name: Gzip Compression
+    description: >-
+      Send Accept-Encoding: gzip header to compress responses and reduce bandwidth.
+      Strongly recommended for any bulk or time-series queries.
+  - name: Exponential Backoff on 403/429
+    description: >-
+      On HTTP 403 (IP blocked) or HTTP 429 (throttled), wait before retrying. Use
+      exponential backoff with jitter; start at 30 seconds for 403 responses, which
+      indicate IP-level blocking that may persist for several minutes.
+  - name: API Key for Bulk Work
+    description: >-
+      Register for a free API key at api.waterdata.usgs.gov/signup/ before running
+      bulk or automated workflows to access the higher rate limit tier.
+  - name: Use POST for Large WQP Queries
+    description: >-
+      When Water Quality Portal query parameters exceed URL length limits, use HTTP POST
+      with a JSON body instead of GET to avoid truncation errors.
+  - name: Contact for High Volume
+    description: >-
+      Contact wdfn@usgs.gov to discuss data needs that require sustained high request
+      rates or bulk data downloads beyond what the standard API supports.
+
+notes:
+  - Specific per-minute or per-hour numeric thresholds are not published; users must
+    observe 403/429 responses to infer effective limits.
+  - The legacy WaterServices (waterservices.usgs.gov) blocks by IP (HTTP 403) rather
+    than returning HTTP 429.
+  - The next-generation OGC APIs at api.waterdata.usgs.gov use HTTP 429 for throttling.
+  - WaterServices is being decommissioned in early 2027; migrate to api.waterdata.usgs.gov.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

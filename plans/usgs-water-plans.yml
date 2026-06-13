@@ -1,0 +1,106 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: USGS Water Services
+providerId: usgs-water
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Water
+  - Hydrology
+  - Environmental
+  - Government
+  - Open Data
+  - Free
+  - Public Domain
+description: >-
+  USGS Water Services are funded by the U.S. federal government and provided free
+  of charge to all users with no subscription fees, data charges, or usage costs.
+  All water data produced by USGS is in the public domain and freely available for
+  any use. The primary access differentiation is between unauthenticated (anonymous)
+  access subject to conservative rate limits, and free API-key authenticated access
+  that grants higher rate limits. API keys are available at no cost via a self-service
+  registration form at api.waterdata.usgs.gov/signup/.
+sources:
+  - https://api.waterdata.usgs.gov/signup/
+  - https://api.waterdata.usgs.gov/docs/
+  - https://waterservices.usgs.gov/docs/
+notes: >-
+  Both legacy WaterServices (being decommissioned early 2027) and the next-generation
+  api.waterdata.usgs.gov APIs follow the same two-tier (anonymous / API key) model.
+  The WQP (Water Quality Portal) does not require API keys.
+plans:
+  - id: usgs-water-anonymous
+    name: Anonymous / Unauthenticated
+    type: free
+    description: >-
+      Default access with no registration or API key required. Suitable for occasional
+      queries, research, and development. Subject to conservative rate limits; IP
+      addresses may be blocked if requests impact service availability for other users.
+      All USGS water data is in the public domain.
+    entries:
+      - label: API Requests
+        description: Unrestricted data queries; conservative rate limit applied
+        name: api_requests
+        type: requests
+        metric: requests
+        limit: -1
+        timeFrame: day
+        geo: Global
+        unit: 1
+        price: 0
+        userMultiplied: false
+    elements:
+      - name: Instantaneous Values Service
+      - name: Daily Values Service
+      - name: Site Service
+      - name: Statistics Service
+      - name: Groundwater Levels Service
+      - name: Water Quality Portal
+      - name: OGC APIs (api.waterdata.usgs.gov)
+
+  - id: usgs-water-api-key
+    name: Free API Key (Higher Rate Limits)
+    type: free
+    description: >-
+      Free registration at api.waterdata.usgs.gov/signup/ provides an API key that
+      raises the per-hour request ceiling above the anonymous baseline. No cost, no
+      credit card, no approval required. Contact wdfn@usgs.gov for custom high-volume
+      needs.
+    entries:
+      - label: API Key Registration
+        description: Free self-service registration; no cost
+        name: api_key
+        type: subscription
+        metric: account
+        limit: 1
+        timeFrame: lifetime
+        geo: Global
+        unit: 1
+        price: 0
+        userMultiplied: false
+      - label: API Requests (Higher Limit)
+        description: Elevated rate limit versus anonymous access; exact threshold not published
+        name: api_requests_keyed
+        type: requests
+        metric: requests
+        limit: -1
+        timeFrame: hour
+        geo: Global
+        unit: 1
+        price: 0
+        userMultiplied: false
+    elements:
+      - name: Instantaneous Values Service
+      - name: Daily Values Service
+      - name: Site Service
+      - name: Statistics Service
+      - name: Groundwater Levels Service
+      - name: OGC APIs (api.waterdata.usgs.gov)
+      - name: Higher Rate Limits
+      - name: API Key Authentication
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

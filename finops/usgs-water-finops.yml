@@ -1,0 +1,179 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: USGS Water Services
+providerId: usgs-water
+publisherName: U.S. Geological Survey (USGS)
+serviceCategory: Government Open Data / Environmental APIs
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Water
+  - Hydrology
+  - Environmental
+  - Government
+  - Open Data
+  - Free
+  - Public Domain
+  - FinOps
+  - FOCUS
+description: >-
+  FOCUS-aligned FinOps profile for USGS Water Services (NWIS REST APIs). All USGS
+  water data APIs are provided at no monetary cost to consumers — they are federally
+  funded public-domain data services. There are no subscription fees, usage-based
+  charges, data egress costs, or overage fees. The cost to the consuming organization
+  is limited to internal engineering time, infrastructure for caching/downstream
+  processing, and potential rate-limit-driven architectural overhead. FinOps practice
+  here focuses on optimizing request efficiency, caching, and dependency risk
+  management (especially given the 2027 WaterServices decommission).
+sources:
+  - https://waterservices.usgs.gov/
+  - https://api.waterdata.usgs.gov/
+  - https://www.waterqualitydata.us/
+  - https://focus.finops.org/focus-specification/v1-3/
+billingModel:
+  pricingCategory: Free
+  billingFrequency: None
+  billingCurrency: USD
+  chargeCategories:
+    - No direct charges; federally funded
+focusColumns:
+  ServiceName: USGS Water Services
+  ServiceCategory: Government Open Data
+  ProviderName: U.S. Geological Survey
+  PublisherName: U.S. Geological Survey (USGS)
+  InvoiceIssuerName: N/A (no-cost public service)
+  BillingCurrency: USD
+  ChargeCategory: No Charge
+meters:
+  - name: api_requests
+    description: Count of API requests made to USGS Water Services endpoints (no direct cost; tracked for rate-limit awareness and optimization)
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+      - consumer_team
+  - name: data_volume
+    description: Volume of data downloaded from USGS endpoints (no egress cost; tracked for cache efficiency and bandwidth planning)
+    unit: MB
+    aggregation: sum
+    dimensions:
+      - api
+      - format
+      - consumer_team
+  - name: engineering_hours
+    description: Internal engineering hours spent on integration, maintenance, and migration (primary cost driver for USGS API consumption)
+    unit: hour
+    aggregation: sum
+    dimensions:
+      - team
+      - phase
+principles:
+  - name: Visibility
+    description: >-
+      Track API request volume per endpoint and per consuming team or application.
+      Monitor for rate-limit hits (HTTP 403/429) as a proxy for inefficient usage
+      patterns. Tag requests with consumer identifiers for accurate attribution.
+  - name: Allocation
+    description: >-
+      Allocate engineering integration and maintenance costs across consuming teams
+      and projects. Attribute data pipeline compute costs (downstream processing of
+      USGS water data) to the relevant product or program.
+  - name: Optimization
+    description: >-
+      Cache USGS responses aggressively — instantaneous values update at most hourly,
+      daily values change once per day, and statistics rarely change. Use gzip
+      compression and precise date/site/parameter filters to minimize response size.
+      Register for the free API key to access higher rate limits before scaling
+      automated workflows. Prioritize migration from legacy WaterServices to
+      api.waterdata.usgs.gov ahead of the early 2027 decommission deadline.
+  - name: Accountability
+    description: >-
+      Designate owners for each USGS Water API integration. Track migration progress
+      from legacy WaterServices to the OGC next-gen APIs. Report on rate-limit
+      incidents and query efficiency metrics at sprint or quarterly reviews.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Workload Optimization
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - Onboarding Workloads
+apis:
+  - name: USGS Instantaneous Values Service
+    baseURL: https://waterservices.usgs.gov/nwis/iv/
+    serviceName: Instantaneous Values
+    serviceCategory: Real-Time Water Data
+    tags:
+      - Real-Time
+      - Streamflow
+  - name: USGS Daily Values Service
+    baseURL: https://waterservices.usgs.gov/nwis/dv/
+    serviceName: Daily Values
+    serviceCategory: Historical Water Data
+    tags:
+      - Historical
+      - Daily
+  - name: USGS Site Service
+    baseURL: https://waterservices.usgs.gov/nwis/site/
+    serviceName: Site Service
+    serviceCategory: Site Metadata
+    tags:
+      - Metadata
+      - Geospatial
+  - name: USGS OGC APIs
+    baseURL: https://api.waterdata.usgs.gov/ogcapi/v0/
+    serviceName: OGC Water Data APIs
+    serviceCategory: Next-Generation Water Data
+    tags:
+      - OGC
+      - Next Generation
+  - name: Water Quality Portal
+    baseURL: https://www.waterqualitydata.us/data/
+    serviceName: Water Quality Portal
+    serviceCategory: Water Quality
+    tags:
+      - Water Quality
+      - EPA
+unitEconomics:
+  - name: Cost per 1K Requests
+    metric: internal_engineering_cost / (api_requests / 1000)
+    target: minimize via caching and efficient query patterns
+  - name: Cache Hit Rate
+    metric: cached_responses / total_requests
+    target: '>80% for daily-values and statistics endpoints'
+  - name: Rate Limit Incident Rate
+    metric: rate_limit_errors / total_requests
+    target: '<0.1% after API key registration and query optimization'
+riskNotes:
+  - >-
+    Legacy WaterServices (waterservices.usgs.gov) is scheduled for decommission in
+    early 2027. Any integration depending on the /nwis/iv/, /nwis/dv/, /nwis/site/,
+    /nwis/stats/, or /nwis/gwlevels/ endpoints must migrate to api.waterdata.usgs.gov
+    before that date to avoid service disruption.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
