@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/combined-metadata/schema",
+  "title": "Combined Metadata",
+  "description": "This endpoint combines metadata from timeseries and field measurements collections by site.",
+  "type": "object",
+  "properties": {
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "agency_code": {
+      "type": "string",
+      "title": "Agency Code"
+    },
+    "agency_name": {
+      "type": "string",
+      "title": "Agency Name"
+    },
+    "monitoring_location_number": {
+      "type": "string",
+      "title": "Monitoring Location Number"
+    },
+    "monitoring_location_name": {
+      "type": "string",
+      "title": "Monitoring Location Name"
+    },
+    "district_code": {
+      "type": "string",
+      "title": "District Code"
+    },
+    "country_code": {
+      "type": "string",
+      "title": "Country Code"
+    },
+    "country_name": {
+      "type": "string",
+      "title": "Country Name"
+    },
+    "state_code": {
+      "type": "string",
+      "title": "State Code"
+    },
+    "state_name": {
+      "type": "string",
+      "title": "State Name"
+    },
+    "county_code": {
+      "type": "string",
+      "title": "County Code"
+    },
+    "county_name": {
+      "type": "string",
+      "title": "County Name"
+    },
+    "minor_civil_division_code": {
+      "type": "string",
+      "title": "Minor Civil Division Code"
+    },
+    "site_type_code": {
+      "type": "string",
+      "title": "Site Type Code"
+    },
+    "site_type": {
+      "type": "string",
+      "title": "Site Type"
+    },
+    "hydrologic_unit_code": {
+      "type": "string",
+      "title": "Hydrologic Unit Code"
+    },
+    "basin_code": {
+      "type": "string",
+      "title": "Basin Code"
+    },
+    "altitude": {
+      "type": "string",
+      "title": "Altitude"
+    },
+    "altitude_accuracy": {
+      "type": "string",
+      "title": "Altitude Accuracy"
+    },
+    "altitude_method_code": {
+      "type": "string",
+      "title": "Altitude Method Code"
+    },
+    "altitude_method_name": {
+      "type": "string",
+      "title": "Altitude Method Name"
+    },
+    "vertical_datum": {
+      "type": "string",
+      "title": "Vertical Datum"
+    },
+    "vertical_datum_name": {
+      "type": "string",
+      "title": "Vertical Datum Name"
+    },
+    "horizontal_positional_accuracy_code": {
+      "type": "string",
+      "title": "Horizontal Positional Accuracy Code"
+    },
+    "horizontal_positional_accuracy": {
+      "type": "string",
+      "title": "Horizontal Positional Accuracy"
+    },
+    "horizontal_position_method_code": {
+      "type": "string",
+      "title": "Horizontal Position Method Code"
+    },
+    "horizontal_position_method_name": {
+      "type": "string",
+      "title": "Horizontal Position Method Name"
+    },
+    "original_horizontal_datum": {
+      "type": "string",
+      "title": "Original Horizontal Datum"
+    },
+    "original_horizontal_datum_name": {
+      "type": "string",
+      "title": "Original Horizontal Datum Name"
+    },
+    "drainage_area": {
+      "type": "string",
+      "title": "Drainage Area"
+    },
+    "contributing_drainage_area": {
+      "type": "string",
+      "title": "Contributing Drainage Area"
+    },
+    "time_zone_abbreviation": {
+      "type": "string",
+      "title": "Time Zone Abbreviation"
+    },
+    "uses_daylight_savings": {
+      "type": "string",
+      "title": "Uses Daylight Savings"
+    },
+    "construction_date": {
+      "type": "string",
+      "title": "Construction Date"
+    },
+    "aquifer_code": {
+      "type": "string",
+      "title": "Aquifer Code"
+    },
+    "national_aquifer_code": {
+      "type": "string",
+      "title": "National Aquifer Code"
+    },
+    "aquifer_type_code": {
+      "type": "string",
+      "title": "Aquifer Type Code"
+    },
+    "well_constructed_depth": {
+      "type": "string",
+      "title": "Well Constructed Depth"
+    },
+    "hole_constructed_depth": {
+      "type": "string",
+      "title": "Hole Constructed Depth"
+    },
+    "depth_source_code": {
+      "type": "string",
+      "title": "Depth Source Code"
+    },
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "title": "Unit Of Measure"
+    },
+    "parameter_name": {
+      "type": "string",
+      "title": "Parameter Name"
+    },
+    "parameter_code": {
+      "type": "string",
+      "title": "Parameter Code"
+    },
+    "statistic_id": {
+      "type": "string",
+      "title": "Statistic Id"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    },
+    "begin": {
+      "type": "string",
+      "title": "Begin"
+    },
+    "end": {
+      "type": "string",
+      "title": "End"
+    },
+    "data_type": {
+      "type": "string",
+      "title": "Data Type"
+    },
+    "computation_identifier": {
+      "type": "string",
+      "title": "Computation Identifier"
+    },
+    "thresholds": {
+      "type": "string",
+      "title": "Thresholds"
+    },
+    "sublocation_identifier": {
+      "type": "string",
+      "title": "Sublocation Identifier"
+    },
+    "primary": {
+      "type": "string",
+      "title": "Primary"
+    },
+    "web_description": {
+      "type": "string",
+      "title": "Web Description"
+    },
+    "parameter_description": {
+      "type": "string",
+      "title": "Parameter Description"
+    },
+    "parent_time_series_id": {
+      "type": "string",
+      "title": "Parent Time Series Id"
+    }
+  }
+}

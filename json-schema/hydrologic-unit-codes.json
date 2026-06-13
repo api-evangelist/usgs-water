@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/hydrologic-unit-codes/schema",
+  "title": "Hydrologic Unit Codes",
+  "description": "Hydrologic units are geographic areas representing part or all of a surface drainage basin or distinct hydrologic feature identified by a unique number (HUC), and a name. The United States is divided and sub-divided into successively smaller hydrologic units which are classified into four levels: regions, sub-regions, accounting units, and cataloging units. Each unit consists of two to eight digits based on the four levels of classification in the hydrologic unit system. Additional information can be found at &lthttps://water.usgs.gov/GIS/huc.html&gt.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "hydrologic_unit_name": {
+      "type": "string",
+      "title": "Hydrologic Unit Name"
+    },
+    "hydrologic_unit_classification_code": {
+      "type": "string",
+      "title": "Hydrologic Unit Classification Code"
+    }
+  }
+}

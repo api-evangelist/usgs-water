@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/peaks/schema",
+  "title": "Peaks",
+  "description": "Annual peak flow values are the maximum instantaneous streamflow values recorded at a particular site for the entire water year from October 1 to September 30. Note that the annual peak flow value may not occur at the same time the maximum water level occurs due to conditions such as backwater, tidal fluctuations, etc.",
+  "type": "object",
+  "properties": {
+    "time_series_id": {
+      "type": "string",
+      "title": "Time Series Id"
+    },
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "parameter_code": {
+      "type": "string",
+      "title": "Parameter Code"
+    },
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "title": "Unit Of Measure"
+    },
+    "value": {
+      "type": "string",
+      "title": "Value"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    },
+    "time": {
+      "type": "string",
+      "title": "Time"
+    },
+    "water_year": {
+      "type": "string",
+      "title": "Water Year"
+    },
+    "year": {
+      "type": "string",
+      "title": "Year"
+    },
+    "month": {
+      "type": "string",
+      "title": "Month"
+    },
+    "day": {
+      "type": "string",
+      "title": "Day"
+    },
+    "time_of_day": {
+      "type": "string",
+      "title": "Time Of Day"
+    },
+    "peak_since": {
+      "type": "string",
+      "title": "Peak Since"
+    },
+    "qualifier": {
+      "type": "string",
+      "title": "Qualifier"
+    }
+  }
+}

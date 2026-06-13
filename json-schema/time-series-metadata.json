@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-series-metadata/schema",
+  "title": "Time Series Metadata",
+  "description": "Daily data and continuous measurements are grouped into time series, which represent a collection of observations of a single parameter, potentially aggregated using a standard statistic, at a single monitoring location. This endpoint provides metadata about those time series, including their operational thresholds, units of measurement, and when the earliest and most recent observations in a time series occurred.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "title": "Unit Of Measure"
+    },
+    "parameter_name": {
+      "type": "string",
+      "title": "Parameter Name"
+    },
+    "parameter_code": {
+      "type": "string",
+      "title": "Parameter Code"
+    },
+    "statistic_id": {
+      "type": "string",
+      "title": "Statistic Id"
+    },
+    "hydrologic_unit_code": {
+      "type": "string",
+      "title": "Hydrologic Unit Code"
+    },
+    "state_name": {
+      "type": "string",
+      "title": "State Name"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    },
+    "begin": {
+      "type": "string",
+      "title": "Begin"
+    },
+    "end": {
+      "type": "string",
+      "title": "End"
+    },
+    "begin_utc": {
+      "type": "string",
+      "title": "Begin Utc"
+    },
+    "end_utc": {
+      "type": "string",
+      "title": "End Utc"
+    },
+    "computation_period_identifier": {
+      "type": "string",
+      "title": "Computation Period Identifier"
+    },
+    "computation_identifier": {
+      "type": "string",
+      "title": "Computation Identifier"
+    },
+    "thresholds": {
+      "type": "string",
+      "title": "Thresholds"
+    },
+    "sublocation_identifier": {
+      "type": "string",
+      "title": "Sublocation Identifier"
+    },
+    "primary": {
+      "type": "string",
+      "title": "Primary"
+    },
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "web_description": {
+      "type": "string",
+      "title": "Web Description"
+    },
+    "parameter_description": {
+      "type": "string",
+      "title": "Parameter Description"
+    },
+    "parent_time_series_id": {
+      "type": "string",
+      "title": "Parent Time Series Id"
+    }
+  }
+}

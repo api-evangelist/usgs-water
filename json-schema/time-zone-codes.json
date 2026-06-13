@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/schema",
+  "title": "Time Zone Codes",
+  "description": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "time_zone_name": {
+      "type": "string",
+      "title": "Time Zone Name"
+    },
+    "time_zone_description": {
+      "type": "string",
+      "title": "Time Zone Description"
+    },
+    "time_zone_utc_offset": {
+      "type": "string",
+      "title": "Time Zone Utc Offset"
+    },
+    "time_zone_daylight_savings_time_code": {
+      "type": "string",
+      "title": "Time Zone Daylight Savings Time Code"
+    },
+    "time_zone_daylight_savings_time_name": {
+      "type": "string",
+      "title": "Time Zone Daylight Savings Time Name"
+    },
+    "time_zone_daylight_savings_utc_offset": {
+      "type": "string",
+      "title": "Time Zone Daylight Savings Utc Offset"
+    }
+  }
+}

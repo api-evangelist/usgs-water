@@ -1,0 +1,259 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "hydro": "http://www.opengis.net/def/appschema/hy_features/hyf/",
+    "ogc": "http://www.opengis.net/spec/ogcapi-features-1/1.0/",
+    "usgs": "https://api.waterdata.usgs.gov/"
+  },
+  "@type": "schema:WebAPI",
+  "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/",
+  "schema:name": "USGS Water Data OGC APIs",
+  "schema:description": "These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.\n",
+  "schema:version": "0.56.0",
+  "schema:license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "schema:provider": {
+    "@type": "schema:GovernmentOrganization",
+    "schema:name": "U.S. Geological Survey",
+    "schema:url": "https://www.usgs.gov/",
+    "schema:contactPoint": {
+      "@type": "schema:ContactPoint",
+      "schema:email": "wdfn@usgs.gov",
+      "schema:contactType": "technical support"
+    }
+  },
+  "schema:documentation": "https://api.waterdata.usgs.gov/docs/",
+  "schema:termsOfService": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "schema:offers": {
+    "@type": "schema:Offer",
+    "schema:price": "0",
+    "schema:priceCurrency": "USD",
+    "schema:description": "Free public access; API keys available at no cost for higher rate limits"
+  },
+  "schema:hasPart": [
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/agency-codes",
+      "schema:name": "Agency Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/agency-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/altitude-datums",
+      "schema:name": "Altitude Datums",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/altitude-datums/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-codes",
+      "schema:name": "Aquifer Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-types",
+      "schema:name": "Aquifer Types",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-types/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements",
+      "schema:name": "Channel Measurements",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/citations",
+      "schema:name": "Citations",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/citations/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/combined-metadata",
+      "schema:name": "Combined Metadata",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/combined-metadata/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous",
+      "schema:name": "Continuous",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-accuracy-codes",
+      "schema:name": "Coordinate Accuracy Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-accuracy-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-datum-codes",
+      "schema:name": "Coordinate Datum Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-datum-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-method-codes",
+      "schema:name": "Coordinate Method Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-method-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/counties",
+      "schema:name": "Counties",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/counties/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/countries",
+      "schema:name": "Countries",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/countries/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily",
+      "schema:name": "Daily",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/field-measurements",
+      "schema:name": "Field Measurements",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/field-measurements/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/field-measurements-metadata",
+      "schema:name": "Field Measurements Metadata",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/field-measurements-metadata/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/hydrologic-unit-codes",
+      "schema:name": "Hydrologic Unit Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/hydrologic-unit-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous",
+      "schema:name": "Latest Continuous",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-daily",
+      "schema:name": "Latest Daily",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-daily/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-field-measurements",
+      "schema:name": "Latest Field Measurements",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-field-measurements/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/medium-codes",
+      "schema:name": "Medium Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/medium-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-categories",
+      "schema:name": "Method Categories",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-categories/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-citations",
+      "schema:name": "Method Citations",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-citations/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/methods",
+      "schema:name": "Methods",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/methods/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations",
+      "schema:name": "Monitoring Locations",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/national-aquifer-codes",
+      "schema:name": "National Aquifer Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/national-aquifer-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes",
+      "schema:name": "Parameter Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/peaks",
+      "schema:name": "Peaks",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/peaks/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/reliability-codes",
+      "schema:name": "Reliability Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/reliability-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/site-types",
+      "schema:name": "Site Types",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/site-types/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/states",
+      "schema:name": "States",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/states/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes",
+      "schema:name": "Statistic Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-series-metadata",
+      "schema:name": "Time Series Metadata",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-series-metadata/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes",
+      "schema:name": "Time Zone Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items"
+    },
+    {
+      "@type": "schema:DataCatalog",
+      "@id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/topographic-codes",
+      "schema:name": "Topographic Codes",
+      "schema:url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/topographic-codes/items"
+    }
+  ],
+  "schema:keywords": [
+    "water data",
+    "hydrology",
+    "streamflow",
+    "groundwater",
+    "water quality",
+    "monitoring locations",
+    "NWIS",
+    "OGC API",
+    "USGS",
+    "environmental data",
+    "time series",
+    "gage height",
+    "aquifer"
+  ]
+}

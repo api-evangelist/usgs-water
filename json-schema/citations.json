@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/citations/schema",
+  "title": "Citations",
+  "description": "Citations associated with water measurement methods.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "citation_description": {
+      "type": "string",
+      "title": "Citation Description"
+    }
+  }
+}

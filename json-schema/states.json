@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/states/schema",
+  "title": "States",
+  "description": "State name or territory. Includes U.S. states and foreign entities classified under FIPS as 'Principal Administrative Divisions'.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "country_code": {
+      "type": "string",
+      "title": "Country Code"
+    },
+    "state_fips_code": {
+      "type": "string",
+      "title": "State Fips Code"
+    },
+    "state_name": {
+      "type": "string",
+      "title": "State Name"
+    },
+    "state_postal_code": {
+      "type": "string",
+      "title": "State Postal Code"
+    }
+  }
+}

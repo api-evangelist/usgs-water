@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/site-types/schema",
+  "title": "Site Types",
+  "description": "The hydrologic cycle setting or a man-made feature thought to affect the hydrologic conditions measured at a site. Primary and secondary site types associated with data collection sites. All sites have a primary site type, and may additionally have a secondary site type that further describes the location.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "site_type_primary_flag": {
+      "type": "string",
+      "title": "Site Type Primary Flag"
+    },
+    "site_type_name": {
+      "type": "string",
+      "title": "Site Type Name"
+    },
+    "site_type_description": {
+      "type": "string",
+      "title": "Site Type Description"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-datum-codes/schema",
+  "title": "Coordinate Datum Codes",
+  "description": "Horizontal datum code for the latitude/longitude coordinates. There are currently more than 300 horizontal datums available for entry.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "coordinate_datum_description": {
+      "type": "string",
+      "title": "Coordinate Datum Description"
+    }
+  }
+}

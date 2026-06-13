@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-method-codes/schema",
+  "title": "Coordinate Method Codes",
+  "description": "Methods used to determine latitude-longitude values.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "coordinate_method_description": {
+      "type": "string",
+      "title": "Coordinate Method Description"
+    }
+  }
+}

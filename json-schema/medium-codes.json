@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/medium-codes/schema",
+  "title": "Medium Codes",
+  "description": "Medium refers to the specific environmental medium from which the sample was collected. Medium type differs from site type because one site type, such as surface water, could have data for several media, such as water, bottom sediment, fish tissue, and others.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "medium_name": {
+      "type": "string",
+      "title": "Medium Name"
+    },
+    "medium_description": {
+      "type": "string",
+      "title": "Medium Description"
+    },
+    "legacy_medium_code": {
+      "type": "string",
+      "title": "Legacy Medium Code"
+    }
+  }
+}

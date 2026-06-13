@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "usgs": "https://api.waterdata.usgs.gov/ogcapi/v0/",
+    "schema": "https://schema.org/",
+    "hydro": "http://www.opengis.net/def/appschema/hy_features/hyf/",
+    "wqp": "https://www.waterqualitydata.us/data/",
+    "id": "@id",
+    "type": "@type",
+    "monitoring_location_number": {
+      "@id": "usgs:monitoring_location_number"
+    },
+    "monitoring_location_name": {
+      "@id": "schema:name"
+    },
+    "agency_code": {
+      "@id": "usgs:agency_code"
+    },
+    "agency_name": {
+      "@id": "schema:Organization"
+    },
+    "state_code": {
+      "@id": "usgs:state_code"
+    },
+    "state_name": {
+      "@id": "schema:addressRegion"
+    },
+    "county_code": {
+      "@id": "usgs:county_code"
+    },
+    "county_name": {
+      "@id": "schema:addressLocality"
+    },
+    "country_code": {
+      "@id": "schema:addressCountry"
+    },
+    "hydrologic_unit_code": {
+      "@id": "hydro:catchment"
+    },
+    "site_type": {
+      "@id": "usgs:site_type"
+    },
+    "site_type_code": {
+      "@id": "usgs:site_type_code"
+    },
+    "altitude": {
+      "@id": "schema:elevation"
+    },
+    "vertical_datum": {
+      "@id": "usgs:vertical_datum"
+    },
+    "horizontal_positional_accuracy": {
+      "@id": "usgs:horizontal_positional_accuracy"
+    },
+    "parameter_code": {
+      "@id": "usgs:parameter_code"
+    },
+    "parameter_name": {
+      "@id": "usgs:parameter_name"
+    },
+    "parameter_description": {
+      "@id": "schema:description"
+    },
+    "unit_of_measure": {
+      "@id": "schema:unitCode"
+    },
+    "time_series_id": {
+      "@id": "usgs:time_series_id"
+    },
+    "approval_status": {
+      "@id": "usgs:approval_status"
+    },
+    "begin_utc": {
+      "@id": "schema:startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "end_utc": {
+      "@id": "schema:endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "last_modified": {
+      "@id": "schema:dateModified",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "aquifer_code": {
+      "@id": "usgs:aquifer_code"
+    },
+    "aquifer_name": {
+      "@id": "usgs:aquifer_name"
+    },
+    "national_aquifer_code": {
+      "@id": "usgs:national_aquifer_code"
+    },
+    "well_constructed_depth": {
+      "@id": "usgs:well_constructed_depth"
+    },
+    "hole_constructed_depth": {
+      "@id": "usgs:hole_constructed_depth"
+    },
+    "medium": {
+      "@id": "usgs:medium"
+    },
+    "sample_fraction": {
+      "@id": "usgs:sample_fraction"
+    },
+    "statistical_basis": {
+      "@id": "usgs:statistical_basis"
+    },
+    "computation_identifier": {
+      "@id": "usgs:computation_identifier"
+    },
+    "computation_period_identifier": {
+      "@id": "usgs:computation_period_identifier"
+    },
+    "measurement_number": {
+      "@id": "usgs:measurement_number"
+    },
+    "measurement_rated": {
+      "@id": "usgs:measurement_rated"
+    },
+    "channel_flow": {
+      "@id": "hydro:discharge"
+    },
+    "channel_velocity": {
+      "@id": "hydro:velocity"
+    },
+    "channel_width": {
+      "@id": "hydro:width"
+    },
+    "channel_area": {
+      "@id": "hydro:crossSectionalArea"
+    },
+    "altitude_accuracy": {
+      "@id": "usgs:altitude_accuracy"
+    },
+    "altitude_datum_description": {
+      "@id": "usgs:altitude_datum_description"
+    },
+    "altitude_method_code": {
+      "@id": "usgs:altitude_method_code"
+    },
+    "altitude_method_name": {
+      "@id": "usgs:altitude_method_name"
+    },
+    "aquifer_type_code": {
+      "@id": "usgs:aquifer_type_code"
+    },
+    "aquifer_type_description": {
+      "@id": "usgs:aquifer_type_description"
+    },
+    "basin_code": {
+      "@id": "usgs:basin_code"
+    },
+    "begin": {
+      "@id": "usgs:begin"
+    },
+    "channel_area_unit": {
+      "@id": "usgs:channel_area_unit"
+    },
+    "channel_evenness": {
+      "@id": "usgs:channel_evenness"
+    },
+    "channel_flow_unit": {
+      "@id": "usgs:channel_flow_unit"
+    },
+    "channel_location_direction": {
+      "@id": "usgs:channel_location_direction"
+    },
+    "channel_location_distance": {
+      "@id": "usgs:channel_location_distance"
+    },
+    "channel_location_distance_unit": {
+      "@id": "usgs:channel_location_distance_unit"
+    },
+    "channel_material": {
+      "@id": "usgs:channel_material"
+    },
+    "channel_measurement_type": {
+      "@id": "usgs:channel_measurement_type"
+    },
+    "channel_name": {
+      "@id": "usgs:channel_name"
+    },
+    "channel_stability": {
+      "@id": "usgs:channel_stability"
+    },
+    "channel_velocity_unit": {
+      "@id": "usgs:channel_velocity_unit"
+    },
+    "channel_width_unit": {
+      "@id": "usgs:channel_width_unit"
+    },
+    "citation_description": {
+      "@id": "usgs:citation_description"
+    },
+    "citation_method_number": {
+      "@id": "usgs:citation_method_number"
+    },
+    "citation_name": {
+      "@id": "usgs:citation_name"
+    },
+    "construction_date": {
+      "@id": "usgs:construction_date"
+    },
+    "contributing_drainage_area": {
+      "@id": "usgs:contributing_drainage_area"
+    },
+    "control_condition": {
+      "@id": "usgs:control_condition"
+    },
+    "coordinate_accuracy_description": {
+      "@id": "usgs:coordinate_accuracy_description"
+    },
+    "coordinate_datum_description": {
+      "@id": "usgs:coordinate_datum_description"
+    },
+    "coordinate_method_description": {
+      "@id": "usgs:coordinate_method_description"
+    },
+    "country_name": {
+      "@id": "usgs:country_name"
+    },
+    "county_fips_code": {
+      "@id": "usgs:county_fips_code"
+    },
+    "data_type": {
+      "@id": "usgs:data_type"
+    },
+    "day": {
+      "@id": "usgs:day"
+    },
+    "depth_source_code": {
+      "@id": "usgs:depth_source_code"
+    },
+    "district_code": {
+      "@id": "usgs:district_code"
+    },
+    "drainage_area": {
+      "@id": "usgs:drainage_area"
+    },
+    "end": {
+      "@id": "usgs:end"
+    },
+    "epa_equivalence": {
+      "@id": "usgs:epa_equivalence"
+    },
+    "field_measurements_series_id": {
+      "@id": "usgs:field_measurements_series_id"
+    },
+    "field_visit_id": {
+      "@id": "usgs:field_visit_id"
+    },
+    "full_topography_description": {
+      "@id": "usgs:full_topography_description"
+    },
+    "horizontal_position_method_code": {
+      "@id": "usgs:horizontal_position_method_code"
+    },
+    "horizontal_position_method_name": {
+      "@id": "usgs:horizontal_position_method_name"
+    },
+    "horizontal_positional_accuracy_code": {
+      "@id": "usgs:horizontal_positional_accuracy_code"
+    },
+    "horizontal_velocity_description": {
+      "@id": "usgs:horizontal_velocity_description"
+    },
+    "hydrologic_unit_classification_code": {
+      "@id": "usgs:hydrologic_unit_classification_code"
+    },
+    "hydrologic_unit_name": {
+      "@id": "usgs:hydrologic_unit_name"
+    },
+    "legacy_medium_code": {
+      "@id": "usgs:legacy_medium_code"
+    },
+    "longitudinal_velocity_description": {
+      "@id": "usgs:longitudinal_velocity_description"
+    },
+    "measurement_type": {
+      "@id": "usgs:measurement_type"
+    },
+    "measuring_agency": {
+      "@id": "usgs:measuring_agency"
+    },
+    "medium_description": {
+      "@id": "usgs:medium_description"
+    },
+    "medium_name": {
+      "@id": "usgs:medium_name"
+    },
+    "method_category": {
+      "@id": "usgs:method_category"
+    },
+    "method_category_description": {
+      "@id": "usgs:method_category_description"
+    },
+    "method_category_name": {
+      "@id": "usgs:method_category_name"
+    },
+    "method_description": {
+      "@id": "usgs:method_description"
+    },
+    "method_id": {
+      "@id": "usgs:method_id"
+    },
+    "method_name": {
+      "@id": "usgs:method_name"
+    },
+    "method_source": {
+      "@id": "usgs:method_source"
+    },
+    "method_type": {
+      "@id": "usgs:method_type"
+    },
+    "minor_civil_division_code": {
+      "@id": "usgs:minor_civil_division_code"
+    },
+    "monitoring_location_id": {
+      "@id": "usgs:monitoring_location_id"
+    },
+    "month": {
+      "@id": "usgs:month"
+    },
+    "national_aquifer_name": {
+      "@id": "usgs:national_aquifer_name"
+    },
+    "observing_procedure": {
+      "@id": "usgs:observing_procedure"
+    },
+    "observing_procedure_code": {
+      "@id": "usgs:observing_procedure_code"
+    },
+    "original_horizontal_datum": {
+      "@id": "usgs:original_horizontal_datum"
+    },
+    "original_horizontal_datum_name": {
+      "@id": "usgs:original_horizontal_datum_name"
+    },
+    "parameter_group_code": {
+      "@id": "usgs:parameter_group_code"
+    },
+    "parent_time_series_id": {
+      "@id": "usgs:parent_time_series_id"
+    },
+    "particle_size_basis": {
+      "@id": "usgs:particle_size_basis"
+    },
+    "peak_since": {
+      "@id": "usgs:peak_since"
+    },
+    "primary": {
+      "@id": "usgs:primary"
+    },
+    "qualifier": {
+      "@id": "usgs:qualifier"
+    },
+    "reading_type": {
+      "@id": "usgs:reading_type"
+    },
+    "reliability_description": {
+      "@id": "usgs:reliability_description"
+    },
+    "revision_created": {
+      "@id": "usgs:revision_created"
+    },
+    "revision_modified": {
+      "@id": "usgs:revision_modified"
+    },
+    "revision_note": {
+      "@id": "usgs:revision_note"
+    },
+    "short_topography_description": {
+      "@id": "usgs:short_topography_description"
+    },
+    "site_type_description": {
+      "@id": "usgs:site_type_description"
+    },
+    "site_type_name": {
+      "@id": "usgs:site_type_name"
+    },
+    "site_type_primary_flag": {
+      "@id": "usgs:site_type_primary_flag"
+    },
+    "state_fips_code": {
+      "@id": "usgs:state_fips_code"
+    },
+    "state_postal_code": {
+      "@id": "usgs:state_postal_code"
+    },
+    "statistic_description": {
+      "@id": "usgs:statistic_description"
+    },
+    "statistic_id": {
+      "@id": "usgs:statistic_id"
+    },
+    "statistic_name": {
+      "@id": "usgs:statistic_name"
+    },
+    "sublocation_identifier": {
+      "@id": "usgs:sublocation_identifier"
+    },
+    "temperature_basis": {
+      "@id": "usgs:temperature_basis"
+    },
+    "thresholds": {
+      "@id": "usgs:thresholds"
+    },
+    "time": {
+      "@id": "usgs:time"
+    },
+    "time_basis": {
+      "@id": "usgs:time_basis"
+    },
+    "time_of_day": {
+      "@id": "usgs:time_of_day"
+    },
+    "time_zone_abbreviation": {
+      "@id": "usgs:time_zone_abbreviation"
+    },
+    "time_zone_daylight_savings_time_code": {
+      "@id": "usgs:time_zone_daylight_savings_time_code"
+    },
+    "time_zone_daylight_savings_time_name": {
+      "@id": "usgs:time_zone_daylight_savings_time_name"
+    },
+    "time_zone_daylight_savings_utc_offset": {
+      "@id": "usgs:time_zone_daylight_savings_utc_offset"
+    },
+    "time_zone_description": {
+      "@id": "usgs:time_zone_description"
+    },
+    "time_zone_name": {
+      "@id": "usgs:time_zone_name"
+    },
+    "time_zone_utc_offset": {
+      "@id": "usgs:time_zone_utc_offset"
+    },
+    "topography_name": {
+      "@id": "usgs:topography_name"
+    },
+    "uses_daylight_savings": {
+      "@id": "usgs:uses_daylight_savings"
+    },
+    "value": {
+      "@id": "usgs:value"
+    },
+    "vertical_datum_name": {
+      "@id": "usgs:vertical_datum_name"
+    },
+    "vertical_velocity_description": {
+      "@id": "usgs:vertical_velocity_description"
+    },
+    "water_year": {
+      "@id": "usgs:water_year"
+    },
+    "web_description": {
+      "@id": "usgs:web_description"
+    },
+    "weight_basis": {
+      "@id": "usgs:weight_basis"
+    },
+    "year": {
+      "@id": "usgs:year"
+    }
+  }
+}

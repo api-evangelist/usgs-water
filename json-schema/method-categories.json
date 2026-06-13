@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-categories/schema",
+  "title": "Method Categories",
+  "description": "Categorical standards for methods describing the associated data's appropriateness for an intended use.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "method_category_name": {
+      "type": "string",
+      "title": "Method Category Name"
+    },
+    "method_category_description": {
+      "type": "string",
+      "title": "Method Category Description"
+    }
+  }
+}

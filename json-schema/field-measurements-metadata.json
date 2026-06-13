@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/field-measurements-metadata/schema",
+  "title": "Field Measurements Metadata",
+  "description": "This endpoint provides metadata about field measurement collections, including when the earliest and most recent observations for a parameter occurred at a monitoring location and its units.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "parameter_code": {
+      "type": "string",
+      "title": "Parameter Code"
+    },
+    "parameter_name": {
+      "type": "string",
+      "title": "Parameter Name"
+    },
+    "parameter_description": {
+      "type": "string",
+      "title": "Parameter Description"
+    },
+    "begin": {
+      "type": "string",
+      "title": "Begin"
+    },
+    "end": {
+      "type": "string",
+      "title": "End"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    }
+  }
+}

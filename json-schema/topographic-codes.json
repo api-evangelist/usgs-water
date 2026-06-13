@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/topographic-codes/schema",
+  "title": "Topographic Codes",
+  "description": "The code that best describes the topographic setting in which the site is located. Topographic setting refers to the geomorphic features in the vicinity of the site.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "topography_name": {
+      "type": "string",
+      "title": "Topography Name"
+    },
+    "short_topography_description": {
+      "type": "string",
+      "title": "Short Topography Description"
+    },
+    "full_topography_description": {
+      "type": "string",
+      "title": "Full Topography Description"
+    }
+  }
+}

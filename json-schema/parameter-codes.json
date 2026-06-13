@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/schema",
+  "title": "Parameter Codes",
+  "description": "Parameter codes are 5-digit codes and associated descriptions used to identify the constituent measured and the units of measure. Some parameter code definitions include information about the sampling matrix, fraction, and methods used to measure the constituent. Some parameters are fixed-value (fxd) numeric codes having textual meaning (for example: parameter code 00041 is a weather code parameter, code of 60 means rain), but more commonly represent a numeric value for chemical, physical, or biological data.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "parameter_name": {
+      "type": "string",
+      "title": "Parameter Name"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "title": "Unit Of Measure"
+    },
+    "parameter_group_code": {
+      "type": "string",
+      "title": "Parameter Group Code"
+    },
+    "parameter_description": {
+      "type": "string",
+      "title": "Parameter Description"
+    },
+    "medium": {
+      "type": "string",
+      "title": "Medium"
+    },
+    "statistical_basis": {
+      "type": "string",
+      "title": "Statistical Basis"
+    },
+    "time_basis": {
+      "type": "string",
+      "title": "Time Basis"
+    },
+    "weight_basis": {
+      "type": "string",
+      "title": "Weight Basis"
+    },
+    "particle_size_basis": {
+      "type": "string",
+      "title": "Particle Size Basis"
+    },
+    "sample_fraction": {
+      "type": "string",
+      "title": "Sample Fraction"
+    },
+    "temperature_basis": {
+      "type": "string",
+      "title": "Temperature Basis"
+    },
+    "epa_equivalence": {
+      "type": "string",
+      "title": "Epa Equivalence"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-codes/schema",
+  "title": "Aquifer Codes",
+  "description": "Local aquifers in USGS data are identified by an aquifer name and geohydrologic unit code (a three-digit number related to the age of the formation, followed by a 4 or 5 character abbreviation for the geologic unit or aquifer name). For the age of formation (aquifer age), generally the smaller the number represents the younger the geohydrologic unit. Aquifer names and the definition of an aquifer can be very subjective. One rock unit may be called different aquifer names by different people. Local aquifers and layered aquifers are often grouped into larger named regional aquifers or aquifer systems. For example, the National Northern Atlantic Coastal Plain aquifer system (National aquifer) consists of five layered regional aquifers. Each regional aquifer is divided into two or more aquifers which may have a different name in each of the states in which the aquifer is found.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "aquifer_name": {
+      "type": "string",
+      "title": "Aquifer Name"
+    }
+  }
+}

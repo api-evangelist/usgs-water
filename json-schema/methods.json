@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/methods/schema",
+  "title": "Methods",
+  "description": "Water measurement or water-quality analytical methods. Codes and descriptions defining a method for calculating or measuring the value of a water quality or quantity parameter. Method codes are associated with one or many parameter codes.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "method_type": {
+      "type": "string",
+      "title": "Method Type"
+    },
+    "method_category": {
+      "type": "string",
+      "title": "Method Category"
+    },
+    "method_name": {
+      "type": "string",
+      "title": "Method Name"
+    },
+    "method_description": {
+      "type": "string",
+      "title": "Method Description"
+    }
+  }
+}

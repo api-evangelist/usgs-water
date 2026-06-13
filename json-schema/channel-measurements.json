@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/schema",
+  "title": "Channel Measurements",
+  "description": "Channel measurements taken as part of streamflow field measurements.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "field_visit_id": {
+      "type": "string",
+      "title": "Field Visit Id"
+    },
+    "measurement_number": {
+      "type": "string",
+      "title": "Measurement Number"
+    },
+    "time": {
+      "type": "string",
+      "title": "Time"
+    },
+    "channel_name": {
+      "type": "string",
+      "title": "Channel Name"
+    },
+    "channel_flow": {
+      "type": "string",
+      "title": "Channel Flow"
+    },
+    "channel_flow_unit": {
+      "type": "string",
+      "title": "Channel Flow Unit"
+    },
+    "channel_width": {
+      "type": "string",
+      "title": "Channel Width"
+    },
+    "channel_width_unit": {
+      "type": "string",
+      "title": "Channel Width Unit"
+    },
+    "channel_area": {
+      "type": "string",
+      "title": "Channel Area"
+    },
+    "channel_area_unit": {
+      "type": "string",
+      "title": "Channel Area Unit"
+    },
+    "channel_velocity": {
+      "type": "string",
+      "title": "Channel Velocity"
+    },
+    "channel_velocity_unit": {
+      "type": "string",
+      "title": "Channel Velocity Unit"
+    },
+    "channel_location_distance": {
+      "type": "string",
+      "title": "Channel Location Distance"
+    },
+    "channel_location_distance_unit": {
+      "type": "string",
+      "title": "Channel Location Distance Unit"
+    },
+    "channel_stability": {
+      "type": "string",
+      "title": "Channel Stability"
+    },
+    "channel_material": {
+      "type": "string",
+      "title": "Channel Material"
+    },
+    "channel_evenness": {
+      "type": "string",
+      "title": "Channel Evenness"
+    },
+    "horizontal_velocity_description": {
+      "type": "string",
+      "title": "Horizontal Velocity Description"
+    },
+    "vertical_velocity_description": {
+      "type": "string",
+      "title": "Vertical Velocity Description"
+    },
+    "longitudinal_velocity_description": {
+      "type": "string",
+      "title": "Longitudinal Velocity Description"
+    },
+    "measurement_type": {
+      "type": "string",
+      "title": "Measurement Type"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    },
+    "channel_measurement_type": {
+      "type": "string",
+      "title": "Channel Measurement Type"
+    },
+    "channel_location_direction": {
+      "type": "string",
+      "title": "Channel Location Direction"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/counties/schema",
+  "title": "Counties",
+  "description": "The name of the county or county equivalent (parish, borough, planning reagion, etc.) in which the site is located. List includes Census Bureau FIPS county codes, names and associated Country and State.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "country_code": {
+      "type": "string",
+      "title": "Country Code"
+    },
+    "state_fips_code": {
+      "type": "string",
+      "title": "State Fips Code"
+    },
+    "county_fips_code": {
+      "type": "string",
+      "title": "County Fips Code"
+    },
+    "county_name": {
+      "type": "string",
+      "title": "County Name"
+    }
+  }
+}

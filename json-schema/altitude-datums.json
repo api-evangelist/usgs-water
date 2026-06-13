@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/altitude-datums/schema",
+  "title": "Altitude Datums",
+  "description": "The recommended vertical datum is NAVD88 (North American Vertical Datum of 1988) where applicable as stated in Office of Information Technical Memo 2002.01. NGVD29 (National Geodetic Vertical Datum of 1929) and NAVD88 are the only datums that can be converted on output. NWIS uses the North American Vertical Datum Conversions (VERTCON) of the National Geodetic Survey to convert from NGVD29 to NAVD88 or vice versa. Conversions to or from other vertical datums are not available.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "altitude_datum_description": {
+      "type": "string",
+      "title": "Altitude Datum Description"
+    }
+  }
+}

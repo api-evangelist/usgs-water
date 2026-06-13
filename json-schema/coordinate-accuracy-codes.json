@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/coordinate-accuracy-codes/schema",
+  "title": "Coordinate Accuracy Codes",
+  "description": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "coordinate_accuracy_description": {
+      "type": "string",
+      "title": "Coordinate Accuracy Description"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/aquifer-types/schema",
+  "title": "Aquifer Types",
+  "description": "Groundwater occurs in aquifers under two different conditions. Where water only partly fills an aquifer, the upper surface is free to rise and decline. These aquifers are referred to as unconfined (or water-table) aquifers. Where water completely fills an aquifer that is overlain by a confining bed, the aquifer is referred to as a confined (or artesian) aquifer. When a confined aquifer is penetrated by a well, the water level in the well will rise above the top of the aquifer (but not necessarily above land surface).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "aquifer_type_description": {
+      "type": "string",
+      "title": "Aquifer Type Description"
+    }
+  }
+}

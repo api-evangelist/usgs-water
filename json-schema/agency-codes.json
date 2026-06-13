@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/agency-codes/schema",
+  "title": "Agency Codes",
+  "description": "Code identifying the agency or organization used for site information, data sources, and permitting agencies. Agency codes are fixed values assigned by the National Water Information System (NWIS).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "agency_name": {
+      "type": "string",
+      "title": "Agency Name"
+    }
+  }
+}

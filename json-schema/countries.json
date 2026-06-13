@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/countries/schema",
+  "title": "Countries",
+  "description": "FIPS country codes and names.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "country_name": {
+      "type": "string",
+      "title": "Country Name"
+    }
+  }
+}

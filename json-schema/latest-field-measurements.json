@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-field-measurements/schema",
+  "title": "Latest Field Measurements",
+  "description": "Field measurements are physically measured values collected during a visit to the monitoring location. Field measurements consist of measurements of gage height and discharge, and readings of groundwater levels, and are primarily used as calibration readings for the automated sensors collecting continuous data. They are collected at a low frequency, and delivery of the data in WDFN may be delayed due to data processing time.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "field_measurements_series_id": {
+      "type": "string",
+      "title": "Field Measurements Series Id"
+    },
+    "field_visit_id": {
+      "type": "string",
+      "title": "Field Visit Id"
+    },
+    "parameter_code": {
+      "type": "string",
+      "title": "Parameter Code"
+    },
+    "monitoring_location_id": {
+      "type": "string",
+      "title": "Monitoring Location Id"
+    },
+    "observing_procedure_code": {
+      "type": "string",
+      "title": "Observing Procedure Code"
+    },
+    "observing_procedure": {
+      "type": "string",
+      "title": "Observing Procedure"
+    },
+    "value": {
+      "type": "string",
+      "title": "Value"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "title": "Unit Of Measure"
+    },
+    "time": {
+      "type": "string",
+      "title": "Time"
+    },
+    "qualifier": {
+      "type": "string",
+      "title": "Qualifier"
+    },
+    "vertical_datum": {
+      "type": "string",
+      "title": "Vertical Datum"
+    },
+    "approval_status": {
+      "type": "string",
+      "title": "Approval Status"
+    },
+    "measuring_agency": {
+      "type": "string",
+      "title": "Measuring Agency"
+    },
+    "last_modified": {
+      "type": "string",
+      "title": "Last Modified"
+    },
+    "control_condition": {
+      "type": "string",
+      "title": "Control Condition"
+    },
+    "measurement_rated": {
+      "type": "string",
+      "title": "Measurement Rated"
+    },
+    "year": {
+      "type": "string",
+      "title": "Year"
+    },
+    "month": {
+      "type": "string",
+      "title": "Month"
+    },
+    "day": {
+      "type": "string",
+      "title": "Day"
+    },
+    "time_of_day": {
+      "type": "string",
+      "title": "Time Of Day"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/reliability-codes/schema",
+  "title": "Reliability Codes",
+  "description": "Code indicating the reliability of the data available for the site.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "reliability_description": {
+      "type": "string",
+      "title": "Reliability Description"
+    }
+  }
+}

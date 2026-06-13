@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/method-citations/schema",
+  "title": "Method Citations",
+  "description": "Citation identifiers for water measurement methods.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id"
+    },
+    "method_id": {
+      "type": "string",
+      "title": "Method Id"
+    },
+    "citation_name": {
+      "type": "string",
+      "title": "Citation Name"
+    },
+    "citation_method_number": {
+      "type": "string",
+      "title": "Citation Method Number"
+    },
+    "method_source": {
+      "type": "string",
+      "title": "Method Source"
+    }
+  }
+}
