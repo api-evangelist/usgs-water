@@ -253,7 +253,7 @@ common:
     url: https://waterservices.usgs.gov/docs/
   - type: Documentation
     url: https://api.waterdata.usgs.gov/docs/
-  - type: SignUp
+  - type: Signup
     url: https://api.waterdata.usgs.gov/signup/
   - type: PrivacyPolicy
     url: https://www.doi.gov/privacy
