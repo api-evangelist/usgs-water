@@ -245,6 +245,10 @@ apis:
         url: https://api.waterdata.usgs.gov/
 
 common:
+  - type: DomainSecurity
+    url: security/usgs-water-domain-security.yml
+  - type: Authentication
+    url: authentication/usgs-water-authentication.yml
   - type: Website
     url: https://waterservices.usgs.gov/
   - type: Website
