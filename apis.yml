@@ -31,7 +31,7 @@ modified: '2026-06-13'
 position: Producer
 url: >-
   https://raw.githubusercontent.com/api-evangelist/usgs-water/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
   - Water
   - Streamflow
