@@ -1,0 +1,2549 @@
+{
+  "item": [
+    {
+      "id": "dbb1ee26-97c8-411f-bdae-b6be281f17a7",
+      "name": "citations",
+      "description": {
+        "content": "Citations associated with water measurement methods.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "15e30fe6-6cf1-4d4e-b26f-a44e05979f30",
+          "name": "Get Citations metadata",
+          "request": {
+            "name": "Get Citations metadata",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b48809e7-989a-4c51-bfde-adfaf46ca931",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8b846024-9889-4ee4-88ce-6c84ab26e99a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2b3a8b27-4a8e-4f16-8878-14b8923252ee",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1418e2b5-6ca2-479b-ade9-15f0dacb2529",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c6b03a7d-06a6-493b-a2bc-5af268bf95d6",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "70bc7c75-43eb-4d24-a4d2-5bbb3e59ca39",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1bfbc651-a14a-4272-8996-24b7e60fca2c",
+          "name": "Get Citations items",
+          "request": {
+            "name": "Get Citations items",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10000",
+                  "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox-crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the given bbox coordinates."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "skipGeometry",
+                  "value": "false",
+                  "description": "This option can be used to skip response geometries for each feature."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "Method citation name. An abbreviated citation that describes the reference."
+                },
+                {
+                  "disabled": false,
+                  "key": "citation_description",
+                  "value": "<string>",
+                  "description": "Method citation description."
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e5792761-f6aa-4ede-a296-89526f8683c1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a7db4664-32c8-4f1e-b5f0-d85238046fb4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "60015c82-2186-4d78-9c67-3058893af23f",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fc796136-a9ed-4476-8cf0-68e803f6e865",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "091f452b-0b85-4137-b907-2cdc18f3b0c3",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fc709a71-62d7-4377-984d-8b6fe88433cf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "citation_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "50761bdb-0c31-473b-bc31-e9801a8a0ae3",
+          "name": "Options for Citations items",
+          "request": {
+            "name": "Options for Citations items",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "096523cc-230f-4bb4-a3a5-0b0bc8fe7b94",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20c82fda-2c75-4028-ba4e-790ea88a9b71",
+          "name": "Get Citations items with CQL2",
+          "request": {
+            "name": "Get Citations items with CQL2",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0776fd2a-f1a4-4f29-9b39-96a008684946",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f3f32578-0d22-4a2f-8001-a055bcc407d8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7a01e808-ada5-4fd5-a7e0-8db6e810e659",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e8e7be11-8574-4dde-b3fa-35917bbec95d",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6a263329-7d8e-4093-aa5d-b870b10b4aa9",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fbef2095-4783-42b8-8e9c-f8b4332208f7",
+          "name": "Get Citations item by id",
+          "request": {
+            "name": "Get Citations item by id",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "85250f74-6dfe-4c87-8492-d4646672b5d2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c28d0eee-05f8-4f5f-9da9-3005754d38ea",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "96ce6d51-6b47-4b33-a1e1-8e3b3832f229",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "94a8afc5-9fe1-403c-8fa0-25e5a4a629e4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0fbc8fb9-98c7-472e-81e2-5e4b69d576c0",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b28cda4e-f748-433e-9f62-be49314fb3e3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d581998-2913-42e6-9fe9-da08154b7212",
+          "name": "Options for Citations item by id",
+          "request": {
+            "name": "Options for Citations item by id",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "68c035c7-09f0-48e8-82a8-103f65fc5b99",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "536c69e1-3af9-437f-8e2d-d0c66e997dab",
+          "name": "Get Citations queryables",
+          "request": {
+            "name": "Get Citations queryables",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "queryables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "profile",
+                  "value": "<string>",
+                  "description": "The profile to be applied to a given request"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8ab92ff4-ee50-45f0-b143-d0e11719dfb9",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2c4e624c-06cd-4cd7-aa92-a50622678bed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d68334dd-d50d-40cd-88c3-280e2ba512df",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bd6c61bd-0b2a-40f6-9c25-7e6d42bbfbbb",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8d0b43d9-b91a-48dc-9c17-45da375797ca",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67d6b9c8-66cd-4bf6-ae60-4afd659e9aa8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2aa2d49f-b9e7-4d8f-bf1d-071df8c10d00",
+          "name": "Get Citations schema",
+          "request": {
+            "name": "Get Citations schema",
+            "description": {
+              "content": "Citations associated with water measurement methods.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "citations",
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fc503d04-f14b-48da-8047-a5244ddd42df",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "68f4ceaf-c1c4-40d1-b499-14366ac5e803",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1c4171e8-8825-4c39-bdb2-5bf19aa3fea1",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1fd72daa-19e9-4317-8fef-ca8c89bf1a05",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a0e2fd61-a2b5-4806-a0b9-42b4ca1f1b75",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1fbc298b-0857-4774-b4bd-3c9efd25ed92",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "citations",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.waterdata.usgs.gov/ogcapi/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4e85274a-7a64-4aa6-8bee-16044d499577",
+    "name": "USGS Water Data OGC APIs agency-codes citations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.\n\n\nContact Support:\n Name: US Geological Survey - Water Data for the Nation",
+      "type": "text/plain"
+    }
+  }
+}

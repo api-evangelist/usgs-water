@@ -1,0 +1,2549 @@
+{
+  "item": [
+    {
+      "id": "f81cc05c-55b7-4de9-a1dd-93553a05eddc",
+      "name": "countries",
+      "description": {
+        "content": "FIPS country codes and names.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dac8dd20-1fa6-4d53-ade6-3302bc86567d",
+          "name": "Get Country identifiers metadata",
+          "request": {
+            "name": "Get Country identifiers metadata",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be51f99c-bc97-4fb2-8a38-5c05eb83d8b0",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "91266551-aaf5-462b-b9f7-588b299434f8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "85a0b94e-088b-4c9e-aa5c-6ac2620bd271",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5671aef0-91b4-4453-a0a8-8683fbb317e7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "afd82e93-557c-4222-8bf7-c4144e9a3bfe",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e0308f4a-8936-4b42-a62e-2ec9c850f7e5",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29050213-9880-423e-b9e0-7709f96eb380",
+          "name": "Get Country identifiers items",
+          "request": {
+            "name": "Get Country identifiers items",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10000",
+                  "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox-crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the given bbox coordinates."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "skipGeometry",
+                  "value": "false",
+                  "description": "This option can be used to skip response geometries for each feature."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "FIPS country code as defined by FIPS PUB 10-4: Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions."
+                },
+                {
+                  "disabled": false,
+                  "key": "country_name",
+                  "value": "<string>",
+                  "description": "Country name."
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ddead92d-f2af-44bd-b257-a6f36430d7b8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "44e98042-0bbd-4583-9de2-5b0f79245dcc",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "135c8b54-49d4-4825-900b-71946d4b22f8",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "afe98ceb-d848-4eef-ac9d-6218d086f1de",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ddaaaa69-ed38-47ba-bc95-985f96b13cad",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b9a75b06-aca6-47be-9dd0-727c3e4d72d3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2bf31f44-9faf-49d6-94b6-1f3558bc7195",
+          "name": "Options for Country identifiers items",
+          "request": {
+            "name": "Options for Country identifiers items",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d71d58db-3a62-4500-94d4-05776c025f40",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69128da2-233e-4f6c-b761-e48af13a9fd3",
+          "name": "Get Country identifiers items with CQL2",
+          "request": {
+            "name": "Get Country identifiers items with CQL2",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "648b83c0-c1e1-44c3-9c1a-2d3db41ea68c",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "eeddbc8e-960d-42d5-9f9a-8e90154d3fd0",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f8640094-f10e-4633-a806-0348cef4f8e7",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2d34e5dd-fcbe-4be3-a03c-cb0eb3bfc4d8",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fe973750-d813-4356-a308-64195e3ab880",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8be43cb0-bdcc-403d-bbfb-befc96db1ad2",
+          "name": "Get Country identifiers item by id",
+          "request": {
+            "name": "Get Country identifiers item by id",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d2bb8f05-2e63-466a-b194-d2ede64db256",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3a1462c0-8147-4701-bbbc-fa8e68bc8f35",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "15c2ea2b-ecbc-42d7-a896-7e859903ab45",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c917097a-0bb6-4b69-8929-03a9fe425f69",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ebc38f7a-a293-44d0-913d-5753836ddc91",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2d03243d-7659-418d-a79b-bbbbfd09ea7d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd26b938-1233-48f9-bb0b-73f6acd2457d",
+          "name": "Options for Country identifiers item by id",
+          "request": {
+            "name": "Options for Country identifiers item by id",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5031b068-744b-4ce7-bbfc-1fa88d35459a",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e07b59f4-9acb-4426-87cf-5e2235175031",
+          "name": "Get Country identifiers queryables",
+          "request": {
+            "name": "Get Country identifiers queryables",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "queryables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "profile",
+                  "value": "<string>",
+                  "description": "The profile to be applied to a given request"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9e763873-a73c-4ea2-b290-f55e16b08848",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b00ffd4f-a19e-47db-be19-7a68720d501c",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "15a9559e-fedd-4393-a455-242129cbe17d",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bc5724ba-f1c8-40ba-aae3-9f100c8d69bf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "59f5f0c8-1a9f-44bb-ab0e-bdc8054e6e41",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "90582d13-b6f3-4ae3-92ab-d274cad2de00",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d4a77af-897d-4d7d-ba3f-da3fa1fcecad",
+          "name": "Get Country identifiers schema",
+          "request": {
+            "name": "Get Country identifiers schema",
+            "description": {
+              "content": "FIPS country codes and names.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "countries",
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7b408865-17d9-4482-9725-081cbe4c6ec7",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5064d8d2-9209-476b-9bd6-32ad2f5da957",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "88b351cf-c9d2-446d-8b7f-5bf1d018d06f",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e1514001-8c89-460b-9b1f-c3800e295419",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b222dfed-98cd-49fc-89b2-739c4a86475f",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "21a6fc31-c73a-4ae8-985b-2cbbb8be5e13",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "countries",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.waterdata.usgs.gov/ogcapi/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0d8d16bc-f127-4f27-ab7d-90fa1a3a8199",
+    "name": "USGS Water Data OGC APIs agency-codes countries API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.\n\n\nContact Support:\n Name: US Geological Survey - Water Data for the Nation",
+      "type": "text/plain"
+    }
+  }
+}

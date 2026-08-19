@@ -1,0 +1,2547 @@
+{
+  "item": [
+    {
+      "id": "dcf6326e-bb24-4307-8060-9846acf781ab",
+      "name": "coordinate-accuracy-codes",
+      "description": {
+        "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a8c5154f-f9a0-47bd-aec9-c29a99972a6e",
+          "name": "Get Coordinate accuracy codes metadata",
+          "request": {
+            "name": "Get Coordinate accuracy codes metadata",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4544259d-18e3-406c-bbcf-a829cd5a8c5b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ed36c7d-c141-47c1-9e5f-40f6bc2adf7e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0c729e7a-6ffd-4971-bf05-7c7060727fae",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f7518594-f670-49ca-b33b-751ecc04e97c",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "43572692-363b-461d-91f1-867422b0aa80",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "de7f711c-d47c-4870-b268-7d927c746818",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2162ff0-98f2-49c5-ae50-5e18b05f536d",
+          "name": "Get Coordinate accuracy codes items",
+          "request": {
+            "name": "Get Coordinate accuracy codes items",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10000",
+                  "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox-crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the given bbox coordinates."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "skipGeometry",
+                  "value": "false",
+                  "description": "This option can be used to skip response geometries for each feature."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "coordinate_accuracy_description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0f7b2148-37d0-4a5a-9938-72f2b2b6d0b1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "49530522-a7bd-4e21-9bdb-1f1803615e09",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aeb3236d-73bc-4bf4-a22a-8bd864c310e9",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5f9f1007-fded-4245-a587-f4d83a8f0e10",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6bccb0a9-667b-494e-8518-49e66b7a973d",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e7b5b03a-fe3f-4f3d-9ee7-d8c31046bc31",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10000"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "coordinate_accuracy_description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9de66082-c36b-4e68-92ba-b05d6c038c71",
+          "name": "Options for Coordinate accuracy codes items",
+          "request": {
+            "name": "Options for Coordinate accuracy codes items",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b974260e-59d9-4ea4-9637-57520ca7c48c",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7005d940-190c-4f95-b0ad-eaf25b8b978f",
+          "name": "Get Coordinate accuracy codes items with CQL2",
+          "request": {
+            "name": "Get Coordinate accuracy codes items with CQL2",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a4af1aba-4d4e-495a-b774-82dbe5e34ed2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "97441aba-398d-460d-90b5-54b09b19858b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "df506fc7-9ead-494f-928c-e68a9d37b6a9",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c58b5d4d-d182-4343-941f-df2a61b824f5",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "038d63cc-7a6c-47c1-9db5-e6b449e12e12",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c18369e-9c4a-4b7a-912d-a3916f78a858",
+          "name": "Get Coordinate accuracy codes item by id",
+          "request": {
+            "name": "Get Coordinate accuracy codes item by id",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1258ac8e-fffd-4e17-8c8d-ca32749f7edf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aae7fecb-a25b-4fd6-9dbd-2ec29763e50f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1daeb2ed-f94a-4160-96a1-f19f27aca642",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e72f50c1-c865-4c4d-93f7-f309a5e69624",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e68d411f-1958-47c1-a29c-44be26eab64d",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a006b7fc-03f0-4157-922b-dcaacbefe178",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "07d4ab86-9053-454e-9e4d-f507bdd73e67",
+          "name": "Options for Coordinate accuracy codes item by id",
+          "request": {
+            "name": "Options for Coordinate accuracy codes item by id",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "10c4d417-0a18-4b23-9415-b3ec0002e2b8",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2c74f57f-924a-45c3-9a33-77a9445e7016",
+          "name": "Get Coordinate accuracy codes queryables",
+          "request": {
+            "name": "Get Coordinate accuracy codes queryables",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "queryables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "profile",
+                  "value": "<string>",
+                  "description": "The profile to be applied to a given request"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "405aef68-2fe7-4151-a7a1-1ed76f905c01",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d3b7f154-ba58-4b70-ba01-65427321cd11",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c40fcfca-5126-4e8a-ae0a-0322d059f694",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "46ab400c-f826-4111-a6cd-2bf7611af306",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "65ffd48e-c3b3-45de-9d20-7faf6260c0e1",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d8851421-bc4f-4912-a4f6-f2cc3d722f73",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a37415df-a1c6-4ef9-9396-041fa0e1a782",
+          "name": "Get Coordinate accuracy codes schema",
+          "request": {
+            "name": "Get Coordinate accuracy codes schema",
+            "description": {
+              "content": "Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "coordinate-accuracy-codes",
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b0147a92-c9aa-4c3d-8782-b6f57d3f3bf5",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b5f1b5a0-6afc-4aeb-9b72-f032b9560bfe",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "60cd7fd0-46cf-4574-8943-9af234834642",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "da1313ef-d737-41af-89fd-7933ed6e36a7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ea9b3ab8-b991-467e-849c-f34b2d8d7568",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0d7b1d94-5102-46fd-a0cf-ea13e1b04d9d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "coordinate-accuracy-codes",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.waterdata.usgs.gov/ogcapi/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "45ec2971-ef82-40d1-ba59-ac15d7de5009",
+    "name": "USGS Water Data OGC APIs agency-codes coordinate-accuracy-codes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.\n\n\nContact Support:\n Name: US Geological Survey - Water Data for the Nation",
+      "type": "text/plain"
+    }
+  }
+}

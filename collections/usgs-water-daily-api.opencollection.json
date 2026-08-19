@@ -1,0 +1,561 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "USGS Water Data OGC APIs agency-codes daily API",
+    "version": "0.56.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "daily",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Daily values metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Get Daily values items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10)."
+              },
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "bbox-crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the given bbox coordinates."
+              },
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "skipGeometry",
+                "value": "",
+                "type": "query",
+                "description": "This option can be used to skip response geometries for each feature."
+              },
+              {
+                "name": "sortby",
+                "value": "",
+                "type": "query",
+                "description": "Specifies a comma-separated list of property names by which the response shall be sorted.  If the property name is preceded by a plus (+) sign it indicates an ascending sort for that property.  If the property name is preceded by a minus (-) sign it indicates a descending sort for that property.  If the property is not preceded by a plus or minus, then the default sort order implied is ascending (+).  \n\nOnly a single page of data can be returned when specifying sortby. If you need more than a single page of data, don't specify a sortby value and sort the full data set after it's been downloaded."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+              },
+              {
+                "name": "time_series_id",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier representing a single time series. This corresponds to the `id` field in the `time-series-metadata` endpoint.\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "monitoring_location_id",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier representing a single monitoring location. This corresponds to the `id` field in the `monitoring-locations` endpoint. Monitoring location IDs are created by combining the agency code of the agency responsible for the monitoring location (e.g. USGS) with the ID number of the monitoring location (e.g. 02238500), separated by a hyphen (e.g. USGS-02238500).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "parameter_code",
+                "value": "",
+                "type": "query",
+                "description": "Parameter codes are 5-digit codes used to identify the constituent measured and the units of measure. A complete list of parameter codes and associated groupings can be found at [https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/items](https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/items).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "statistic_id",
+                "value": "",
+                "type": "query",
+                "description": "A code corresponding to the statistic an observation represents. Example codes include 00001 (max), 00002 (min), and 00003 (mean). A complete list of codes and their descriptions can be found at [https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes/items](https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes/items).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "time",
+                "value": "",
+                "type": "query",
+                "description": "The date an observation represents. You can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `time` that intersects the value of datetime are selected. If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.\n"
+              },
+              {
+                "name": "value",
+                "value": "",
+                "type": "query",
+                "description": "The value of the observation. Values are transmitted as strings in the JSON response format in order to preserve precision.\n"
+              },
+              {
+                "name": "unit_of_measure",
+                "value": "",
+                "type": "query",
+                "description": "A human-readable description of the units of measurement associated with an observation."
+              },
+              {
+                "name": "approval_status",
+                "value": "",
+                "type": "query",
+                "description": "Some of the data that you have obtained from this U.S. Geological Survey database may not have received Director's approval.  Any such data values are qualified as provisional and are subject to revision.  Provisional data are released on the condition that neither the USGS nor the United States Government may be held liable for any damages resulting from its use. This field reflects the approval status of each record, and is either \"Approved\", meaining processing review has been completed and the data is approved for publication, or \"Provisional\" and subject to revision. For more information about provisional data, go to [https://waterdata.usgs.gov/provisional-data-statement/](https://waterdata.usgs.gov/provisional-data-statement/).\n"
+              },
+              {
+                "name": "qualifier",
+                "value": "",
+                "type": "query",
+                "description": "This field indicates any qualifiers associated with an observation, for instance if a sensor may have been impacted by ice or if values were estimated.\n"
+              },
+              {
+                "name": "last_modified",
+                "value": "",
+                "type": "query",
+                "description": "The last time a record was refreshed in our database. This may happen due to regular operational processes and does not necessarily indicate anything about the measurement has changed.\nYou can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `last_modified` that intersects the value of datetime are selected.\n"
+              },
+              {
+                "name": "agency_code",
+                "value": "",
+                "type": "query",
+                "description": "The agency that is reporting the data."
+              },
+              {
+                "name": "agency_name",
+                "value": "",
+                "type": "query",
+                "description": "The name of the agency that is reporting the data."
+              },
+              {
+                "name": "altitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "altitude_accuracy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "altitude_method_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "altitude_method_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "aquifer_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "aquifer_type_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "basin_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "construction_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contributing_drainage_area",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "county_code",
+                "value": "",
+                "type": "query",
+                "description": "The code for the county or county equivalent in which the monitoring location is located."
+              },
+              {
+                "name": "county_name",
+                "value": "",
+                "type": "query",
+                "description": "The name of the county or county equivalent in which the monitoring location is located."
+              },
+              {
+                "name": "depth_source_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "district_code",
+                "value": "",
+                "type": "query",
+                "description": "The FIPS state code used as the district code by the managing Water Science Center."
+              },
+              {
+                "name": "drainage_area",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hole_constructed_depth",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "horizontal_position_method_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "horizontal_position_method_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "horizontal_positional_accuracy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "horizontal_positional_accuracy_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hydrologic_unit_code",
+                "value": "",
+                "type": "query",
+                "description": "The hydrologic unit code (HUC) for the monitoring location. Supports prefix matching — querying with a shorter HUC (e.g. \"04\") matches all locations within that hydrologic region.\n Search will match partial HUCs."
+              },
+              {
+                "name": "minor_civil_division_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "monitoring_location_name",
+                "value": "",
+                "type": "query",
+                "description": "This is the official name of the monitoring location in the database."
+              },
+              {
+                "name": "monitoring_location_number",
+                "value": "",
+                "type": "query",
+                "description": "Each monitoring location in the USGS data base has a unique 8- to 15-digit identification number."
+              },
+              {
+                "name": "national_aquifer_code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "original_horizontal_datum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "original_horizontal_datum_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_type",
+                "value": "",
+                "type": "query",
+                "description": "A description of the hydrologic setting of the monitoring location."
+              },
+              {
+                "name": "site_type_code",
+                "value": "",
+                "type": "query",
+                "description": "A code describing the hydrologic setting of the monitoring location."
+              },
+              {
+                "name": "state_code",
+                "value": "",
+                "type": "query",
+                "description": "A two-digit ANSI code to define the state in which the monitoring location is located."
+              },
+              {
+                "name": "state_name",
+                "value": "",
+                "type": "query",
+                "description": "The name of the state or state equivalent in which the monitoring location is located."
+              },
+              {
+                "name": "time_zone_abbreviation",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "uses_daylight_savings",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vertical_datum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vertical_datum_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "well_constructed_depth",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Get Daily values items with CQL2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Options for Daily values items",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Get Daily values item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items/:featureId",
+            "params": [
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Options for Daily values item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items/:featureId",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Get Daily values queryables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/queryables",
+            "params": [
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "profile",
+                "value": "",
+                "type": "query",
+                "description": "The profile to be applied to a given request"
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        },
+        {
+          "info": {
+            "name": "Get Daily values schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/schema",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are a"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

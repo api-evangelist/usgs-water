@@ -1,0 +1,450 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "USGS Water Data OGC APIs agency-codes channel-measurements API",
+    "version": "0.56.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "channel-measurements",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Channel measurements metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Get Channel measurements items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10)."
+              },
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "bbox-crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the given bbox coordinates."
+              },
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "skipGeometry",
+                "value": "",
+                "type": "query",
+                "description": "This option can be used to skip response geometries for each feature."
+              },
+              {
+                "name": "sortby",
+                "value": "",
+                "type": "query",
+                "description": "Specifies a comma-separated list of property names by which the response shall be sorted.  If the property name is preceded by a plus (+) sign it indicates an ascending sort for that property.  If the property name is preceded by a minus (-) sign it indicates a descending sort for that property.  If the property is not preceded by a plus or minus, then the default sort order implied is ascending (+).  \n\nOnly a single page of data can be returned when specifying sortby. If you need more than a single page of data, don't specify a sortby value and sort the full data set after it's been downloaded."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "A universally unique identifier (UUID) representing a single version of a record. It is not stable over time. Every time the record is refreshed in our database (which may happen as part of normal operations and does not imply any change to the data itself) a new ID will be generated. To uniquely identify a single observation over time, compare the `time` and `time_series_id` fields; each time series will only have a single observation at a given `time`.\n"
+              },
+              {
+                "name": "monitoring_location_id",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier representing a single monitoring location. This corresponds to the `id` field in the `monitoring-locations` endpoint. Monitoring location IDs are created by combining the agency code of the agency responsible for the monitoring location (e.g. USGS) with the ID number of the monitoring location (e.g. 02238500), separated by a hyphen (e.g. USGS-02238500).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "field_visit_id",
+                "value": "",
+                "type": "query",
+                "description": "A universally unique identifier (UUID) for the field visit. Multiple measurements may be made during a single field visit.\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+              },
+              {
+                "name": "measurement_number",
+                "value": "",
+                "type": "query",
+                "description": "Measurement number."
+              },
+              {
+                "name": "time",
+                "value": "",
+                "type": "query",
+                "description": "The date an observation represents. You can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `time` that intersects the value of datetime are selected. If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.\n"
+              },
+              {
+                "name": "channel_name",
+                "value": "",
+                "type": "query",
+                "description": "The channel name."
+              },
+              {
+                "name": "channel_flow",
+                "value": "",
+                "type": "query",
+                "description": "Channel discharge."
+              },
+              {
+                "name": "channel_flow_unit",
+                "value": "",
+                "type": "query",
+                "description": "The units for channel discharge."
+              },
+              {
+                "name": "channel_width",
+                "value": "",
+                "type": "query",
+                "description": "The channel width."
+              },
+              {
+                "name": "channel_width_unit",
+                "value": "",
+                "type": "query",
+                "description": "The units for channel width."
+              },
+              {
+                "name": "channel_area",
+                "value": "",
+                "type": "query",
+                "description": "The channel area."
+              },
+              {
+                "name": "channel_area_unit",
+                "value": "",
+                "type": "query",
+                "description": "The units for channel area."
+              },
+              {
+                "name": "channel_velocity",
+                "value": "",
+                "type": "query",
+                "description": "The mean channel velocity."
+              },
+              {
+                "name": "channel_velocity_unit",
+                "value": "",
+                "type": "query",
+                "description": "The units for channel velocity."
+              },
+              {
+                "name": "channel_location_distance",
+                "value": "",
+                "type": "query",
+                "description": "The channel location distance."
+              },
+              {
+                "name": "channel_location_distance_unit",
+                "value": "",
+                "type": "query",
+                "description": "The units for channel location distance."
+              },
+              {
+                "name": "channel_stability",
+                "value": "",
+                "type": "query",
+                "description": "The stability of the channel material."
+              },
+              {
+                "name": "channel_material",
+                "value": "",
+                "type": "query",
+                "description": "The channel material."
+              },
+              {
+                "name": "channel_evenness",
+                "value": "",
+                "type": "query",
+                "description": "The channel evenness from bank to bank."
+              },
+              {
+                "name": "horizontal_velocity_description",
+                "value": "",
+                "type": "query",
+                "description": "The horizontal velocity description."
+              },
+              {
+                "name": "vertical_velocity_description",
+                "value": "",
+                "type": "query",
+                "description": "The vertical velocity description."
+              },
+              {
+                "name": "longitudinal_velocity_description",
+                "value": "",
+                "type": "query",
+                "description": "The longitudinal velocity description."
+              },
+              {
+                "name": "measurement_type",
+                "value": "",
+                "type": "query",
+                "description": "The measurement type."
+              },
+              {
+                "name": "last_modified",
+                "value": "",
+                "type": "query",
+                "description": "The last time a record was refreshed in our database. This may happen due to regular operational processes and does not necessarily indicate anything about the measurement has changed.\nYou can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `last_modified` that intersects the value of datetime are selected.\n"
+              },
+              {
+                "name": "channel_measurement_type",
+                "value": "",
+                "type": "query",
+                "description": "The channel measurement type."
+              },
+              {
+                "name": "channel_location_direction",
+                "value": "",
+                "type": "query",
+                "description": "Location of the measurement from the gage."
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Get Channel measurements items with CQL2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Options for Channel measurements items",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Get Channel measurements item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items/:featureId",
+            "params": [
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Options for Channel measurements item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/items/:featureId",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Get Channel measurements queryables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/queryables",
+            "params": [
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "profile",
+                "value": "",
+                "type": "query",
+                "description": "The profile to be applied to a given request"
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        },
+        {
+          "info": {
+            "name": "Get Channel measurements schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/channel-measurements/schema",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "Channel measurements taken as part of streamflow field measurements.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

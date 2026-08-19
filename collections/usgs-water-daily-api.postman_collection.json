@@ -1,0 +1,3962 @@
+{
+  "item": [
+    {
+      "id": "718c1c36-7c62-48a7-bfab-b13471d9d7eb",
+      "name": "daily",
+      "description": {
+        "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5085b75d-3f48-4194-bd01-3934c8ea00dc",
+          "name": "Get Daily values metadata",
+          "request": {
+            "name": "Get Daily values metadata",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ebc2b96-3a06-458c-b747-4c222fe02677",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e8134c1a-4f35-4b56-a391-707d3eaacb50",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b364d6eb-ad76-403f-b2cd-4205bcba86d8",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4a3a7d82-fc9c-4233-8156-e5f003032dda",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "38661805-3d84-448c-a235-08a1718928a4",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "228658bc-211d-42f8-811e-f8bc590bad1f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c225a6f-e007-42f0-b37f-c5e5dc170a09",
+          "name": "Get Daily values items",
+          "request": {
+            "name": "Get Daily values items",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10",
+                  "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10)."
+                },
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox-crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the given bbox coordinates."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "skipGeometry",
+                  "value": "false",
+                  "description": "This option can be used to skip response geometries for each feature."
+                },
+                {
+                  "disabled": false,
+                  "key": "sortby",
+                  "value": "<string>",
+                  "description": "Specifies a comma-separated list of property names by which the response shall be sorted.  If the property name is preceded by a plus (+) sign it indicates an ascending sort for that property.  If the property name is preceded by a minus (-) sign it indicates a descending sort for that property.  If the property is not preceded by a plus or minus, then the default sort order implied is ascending (+).  \n\nOnly a single page of data can be returned when specifying sortby. If you need more than a single page of data, don't specify a sortby value and sort the full data set after it's been downloaded."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+                },
+                {
+                  "disabled": false,
+                  "key": "time_series_id",
+                  "value": "<string>",
+                  "description": "A unique identifier representing a single time series. This corresponds to the `id` field in the `time-series-metadata` endpoint.\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+                },
+                {
+                  "disabled": false,
+                  "key": "monitoring_location_id",
+                  "value": "<string>",
+                  "description": "A unique identifier representing a single monitoring location. This corresponds to the `id` field in the `monitoring-locations` endpoint. Monitoring location IDs are created by combining the agency code of the agency responsible for the monitoring location (e.g. USGS) with the ID number of the monitoring location (e.g. 02238500), separated by a hyphen (e.g. USGS-02238500).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+                },
+                {
+                  "disabled": false,
+                  "key": "parameter_code",
+                  "value": "<string>",
+                  "description": "Parameter codes are 5-digit codes used to identify the constituent measured and the units of measure. A complete list of parameter codes and associated groupings can be found at [https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/items](https://api.waterdata.usgs.gov/ogcapi/v0/collections/parameter-codes/items).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+                },
+                {
+                  "disabled": false,
+                  "key": "statistic_id",
+                  "value": "<string>",
+                  "description": "A code corresponding to the statistic an observation represents. Example codes include 00001 (max), 00002 (min), and 00003 (mean). A complete list of codes and their descriptions can be found at [https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes/items](https://api.waterdata.usgs.gov/ogcapi/v0/collections/statistic-codes/items).\n Split parameters are enabled for this field, so you can supply multiple values separated by commas."
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>",
+                  "description": "The date an observation represents. You can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `time` that intersects the value of datetime are selected. If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "value",
+                  "value": "<string>",
+                  "description": "The value of the observation. Values are transmitted as strings in the JSON response format in order to preserve precision.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_of_measure",
+                  "value": "<string>",
+                  "description": "A human-readable description of the units of measurement associated with an observation."
+                },
+                {
+                  "disabled": false,
+                  "key": "approval_status",
+                  "value": "<string>",
+                  "description": "Some of the data that you have obtained from this U.S. Geological Survey database may not have received Director's approval.  Any such data values are qualified as provisional and are subject to revision.  Provisional data are released on the condition that neither the USGS nor the United States Government may be held liable for any damages resulting from its use. This field reflects the approval status of each record, and is either \"Approved\", meaining processing review has been completed and the data is approved for publication, or \"Provisional\" and subject to revision. For more information about provisional data, go to [https://waterdata.usgs.gov/provisional-data-statement/](https://waterdata.usgs.gov/provisional-data-statement/).\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "qualifier",
+                  "value": "<string>",
+                  "description": "This field indicates any qualifiers associated with an observation, for instance if a sensor may have been impacted by ice or if values were estimated.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_modified",
+                  "value": "<string>",
+                  "description": "The last time a record was refreshed in our database. This may happen due to regular operational processes and does not necessarily indicate anything about the measurement has changed.\nYou can query this field using date-times or intervals, adhering to RFC 3339, or using ISO 8601 duration objects. Intervals may be bounded or half-bounded (double-dots at start or end).\nExamples:\n\n  - A date-time: \"2018-02-12T23:20:50Z\"\n  - A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\"\n  - Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"\n  - Duration objects: \"P1M\" for data from the past month or \"PT36H\" for the last 36 hours\n\nOnly features that have a `last_modified` that intersects the value of datetime are selected.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "agency_code",
+                  "value": "",
+                  "description": "The agency that is reporting the data."
+                },
+                {
+                  "disabled": false,
+                  "key": "agency_name",
+                  "value": "",
+                  "description": "The name of the agency that is reporting the data."
+                },
+                {
+                  "disabled": false,
+                  "key": "altitude",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "altitude_accuracy",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "altitude_method_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "altitude_method_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "aquifer_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "aquifer_type_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "basin_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "construction_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contributing_drainage_area",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "country_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "country_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "county_code",
+                  "value": "",
+                  "description": "The code for the county or county equivalent in which the monitoring location is located."
+                },
+                {
+                  "disabled": false,
+                  "key": "county_name",
+                  "value": "",
+                  "description": "The name of the county or county equivalent in which the monitoring location is located."
+                },
+                {
+                  "disabled": false,
+                  "key": "depth_source_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "district_code",
+                  "value": "",
+                  "description": "The FIPS state code used as the district code by the managing Water Science Center."
+                },
+                {
+                  "disabled": false,
+                  "key": "drainage_area",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hole_constructed_depth",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "horizontal_position_method_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "horizontal_position_method_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "horizontal_positional_accuracy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "horizontal_positional_accuracy_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hydrologic_unit_code",
+                  "value": "",
+                  "description": "The hydrologic unit code (HUC) for the monitoring location. Supports prefix matching — querying with a shorter HUC (e.g. \"04\") matches all locations within that hydrologic region.\n Search will match partial HUCs."
+                },
+                {
+                  "disabled": false,
+                  "key": "minor_civil_division_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "monitoring_location_name",
+                  "value": "",
+                  "description": "This is the official name of the monitoring location in the database."
+                },
+                {
+                  "disabled": false,
+                  "key": "monitoring_location_number",
+                  "value": "",
+                  "description": "Each monitoring location in the USGS data base has a unique 8- to 15-digit identification number."
+                },
+                {
+                  "disabled": false,
+                  "key": "national_aquifer_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "original_horizontal_datum",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "original_horizontal_datum_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "site_type",
+                  "value": "",
+                  "description": "A description of the hydrologic setting of the monitoring location."
+                },
+                {
+                  "disabled": false,
+                  "key": "site_type_code",
+                  "value": "",
+                  "description": "A code describing the hydrologic setting of the monitoring location."
+                },
+                {
+                  "disabled": false,
+                  "key": "state_code",
+                  "value": "",
+                  "description": "A two-digit ANSI code to define the state in which the monitoring location is located."
+                },
+                {
+                  "disabled": false,
+                  "key": "state_name",
+                  "value": "",
+                  "description": "The name of the state or state equivalent in which the monitoring location is located."
+                },
+                {
+                  "disabled": false,
+                  "key": "time_zone_abbreviation",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "uses_daylight_savings",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "vertical_datum",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "vertical_datum_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "well_constructed_depth",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6e3b6233-014a-4a98-be9e-f6ba03402ff5",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6f645147-4945-431f-8cd8-3f718e11c790",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e2e35f34-72e4-4b17-bc1b-316a3c57f3fa",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5c2200d5-5eb6-4f9f-b4e9-ad6a1e0cae34",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c286b6c9-6ffa-43db-ac63-df398e6b9d84",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4c7793e6-b60f-43b6-ab1e-dd0fa2722970",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sortby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "time_series_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "parameter_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statistic_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_of_measure",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "approval_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qualifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_modified",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agency_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "agency_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "altitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_accuracy",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "altitude_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "altitude_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aquifer_type_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "basin_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "construction_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contributing_drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "country_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "county_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "county_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "depth_source_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "district_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "drainage_area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "hole_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "horizontal_position_method_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_position_method_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "horizontal_positional_accuracy_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hydrologic_unit_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "minor_civil_division_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitoring_location_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "monitoring_location_number",
+                      "value": ""
+                    },
+                    {
+                      "key": "national_aquifer_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "original_horizontal_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "site_type",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_type_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_code",
+                      "value": ""
+                    },
+                    {
+                      "key": "state_name",
+                      "value": ""
+                    },
+                    {
+                      "key": "time_zone_abbreviation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "uses_daylight_savings",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "vertical_datum_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "well_constructed_depth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5ef00c21-2076-4dc7-b343-92b3caab2de6",
+          "name": "Options for Daily values items",
+          "request": {
+            "name": "Options for Daily values items",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b7290ba0-d5f2-4a4a-8143-f74c131e7e79",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "debd6a7f-22c5-4ed4-a519-b4bb510ed5bd",
+          "name": "Get Daily values items with CQL2",
+          "request": {
+            "name": "Get Daily values items with CQL2",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "40a47cd1-57a7-4c3b-9cf2-a0cec2955d09",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8b3ee08f-32ed-4df6-9f48-2b5ffc3ee8f1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "44a8b4a0-b6b2-4863-8995-db329522ac09",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "db0f94ef-af8e-4270-8b27-b07216401a6e",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0c701617-a3d2-45f4-bc16-8b426a3d912f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b120e66e-7d97-463f-b98e-111d42397a71",
+          "name": "Get Daily values item by id",
+          "request": {
+            "name": "Get Daily values item by id",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6a3f76df-f487-43a0-9b0e-6937ac542aa5",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9dd7e2db-6925-4423-822b-0572be4fa0d3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1aebb854-a643-444c-8f44-5a826e24719d",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0269ca79-4267-4cd5-a96c-b37b0475ac1f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0453574b-dc47-4ffc-a4ca-e98785c0f102",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "87249bfb-90cd-46e4-80fe-4698988a696b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aabd2a82-9700-4d7f-a687-8d2411b9190d",
+          "name": "Options for Daily values item by id",
+          "request": {
+            "name": "Options for Daily values item by id",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a955af40-222a-423e-ad00-54dd0fb309bb",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd748667-680f-4ad9-9076-82c5e542fda7",
+          "name": "Get Daily values queryables",
+          "request": {
+            "name": "Get Daily values queryables",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "queryables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "profile",
+                  "value": "<string>",
+                  "description": "The profile to be applied to a given request"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "050df422-a751-4308-8857-56c446984094",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fd33449e-f7fb-41f1-bd3f-b11f2f303a69",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ace21983-6d43-42d7-bf53-4dba3fffec78",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "375ac8e5-e1de-4bbf-b849-7a52c1749be4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8a04e17c-0646-4823-8da9-2d2e410374e1",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d63cb946-4bf9-4230-b44e-74ae5e38f326",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "157c97e5-0327-4cc7-87b0-ec18dabccb00",
+          "name": "Get Daily values schema",
+          "request": {
+            "name": "Get Daily values schema",
+            "description": {
+              "content": "Daily data provide one data value to represent water conditions for the day. Throughout much of the history of the USGS, the primary water data available was daily data collected manually at the monitoring location once each day. With improved availability of computer storage and automated transmission of data, the daily data published today are generally a statistical summary or metric of the continuous data collected each day, such as the daily mean, minimum, or maximum value. Daily data are automatically calculated from the continuous data of the same parameter code and are described by parameter code and a statistic code. These data have also been referred to as “daily values” or “DV”.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "daily",
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "query"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8bb666c0-1055-4650-acde-b072f3ff47a3",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ff2b40b0-3cd0-45d3-bb43-173294903327",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "faa7636d-1f37-460d-8fdf-9ca163836b56",
+              "name": "Forbidden - API key is missing or not authorized for this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"API_KEY_MISSING\",\n    \"message\": \"No api_key was supplied. Get one at https://api.waterdata.usgs.gov/signup/\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "80052c91-5294-4253-ba61-fc5b28f8ab00",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4f9ae59b-aafa-49ea-b434-8e328da3f3b1",
+              "name": "Too Many Requests - Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Make sure you provided your API key from https://api.waterdata.usgs.gov/signup/, then either try again later or contact us at https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov for assistance.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "09f493e8-9677-4020-ac98-bb83de24639e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "daily",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.waterdata.usgs.gov/ogcapi/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c95de3e4-6349-43eb-8a20-f6dd31379641",
+    "name": "USGS Water Data OGC APIs agency-codes daily API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.\n\n\nContact Support:\n Name: US Geological Survey - Water Data for the Nation",
+      "type": "text/plain"
+    }
+  }
+}

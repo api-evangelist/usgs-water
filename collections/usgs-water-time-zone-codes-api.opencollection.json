@@ -1,0 +1,330 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "USGS Water Data OGC APIs agency-codes time-zone-codes API",
+    "version": "0.56.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "time-zone-codes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Time zone codes metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Get Time zone codes items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=50000, default=10000)."
+              },
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "bbox-crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the given bbox coordinates."
+              },
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "skipGeometry",
+                "value": "",
+                "type": "query",
+                "description": "This option can be used to skip response geometries for each feature."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Time zone code. An NWIS time zone code."
+              },
+              {
+                "name": "time_zone_name",
+                "value": "",
+                "type": "query",
+                "description": "Time zone name. An English name for a world time zone."
+              },
+              {
+                "name": "time_zone_description",
+                "value": "",
+                "type": "query",
+                "description": "Time zone description."
+              },
+              {
+                "name": "time_zone_utc_offset",
+                "value": "",
+                "type": "query",
+                "description": "Coordinated Universal Time (UTC) offset time. The number of hours offset from UTC time, in ISO format."
+              },
+              {
+                "name": "time_zone_daylight_savings_time_code",
+                "value": "",
+                "type": "query",
+                "description": "Time zone Daylight Saving Time code."
+              },
+              {
+                "name": "time_zone_daylight_savings_time_name",
+                "value": "",
+                "type": "query",
+                "description": "Time zone Daylight Saving Time name."
+              },
+              {
+                "name": "time_zone_daylight_savings_utc_offset",
+                "value": "",
+                "type": "query",
+                "description": "Daylight Saving Time offset time. The number of hours offset from UTC time when Daylight Saving Time is in effect, in ISO format."
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "CQL Text filter expression.  CQL JSON cannot be used here, only in the body. \nSee also: https://docs.pygeoapi.io/en/latest/cql.html \n\nExample: time_series_id IN ('64ee32f5350a4ec4967435dcd2e364ea', '3e55d9c2d8a54bec9ca5e292b07d5a96')"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Get Time zone codes items with CQL2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Options for Time zone codes items",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Get Time zone codes item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items/:featureId",
+            "params": [
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Options for Time zone codes item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/items/:featureId",
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Get Time zone codes queryables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/queryables",
+            "params": [
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "profile",
+                "value": "",
+                "type": "query",
+                "description": "The profile to be applied to a given request"
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        },
+        {
+          "info": {
+            "name": "Get Time zone codes schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/time-zone-codes/schema",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "api_key",
+              "value": "{{api_key}}",
+              "placement": "query"
+            }
+          },
+          "docs": "The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind UTC. The offset Z specifically signifies UTC.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
