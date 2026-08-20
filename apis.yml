@@ -276,6 +276,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - Citations
+  tags_raw:
   - citations
   properties:
   - type: OpenAPI
@@ -387,6 +389,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - Countries
+  tags_raw:
   - countries
   properties:
   - type: OpenAPI
@@ -408,6 +412,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - Daily
+  tags_raw:
   - daily
   properties:
   - type: OpenAPI
@@ -587,7 +593,8 @@ apis:
     with one or many parameter codes.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
-  tags:
+  tags: []
+  tags_raw:
   - methods
   properties:
   - type: OpenAPI
@@ -606,6 +613,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - Monitoring Locations
+  tags_raw:
   - monitoring-locations
   properties:
   - type: OpenAPI
@@ -690,6 +699,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - Server
+  tags_raw:
   - server
   properties:
   - type: OpenAPI
@@ -723,6 +734,8 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
+  - States
+  tags_raw:
   - states
   properties:
   - type: OpenAPI
