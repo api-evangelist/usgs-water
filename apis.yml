@@ -625,7 +625,7 @@ apis:
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
   tags:
-  - Monitoring Locations
+  - monitoring-locations
   tags_raw:
   - monitoring-locations
   properties:
