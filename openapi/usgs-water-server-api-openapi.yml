@@ -1,4 +1,4 @@
-openapi: 3.0.2
+openapi: 3.2.0
 info:
   contact:
     name: US Geological Survey - Water Data for the Nation
@@ -12,14 +12,12 @@ info:
       - href: https://waterdata.usgs.gov/questions-comments/?referrerUrl=https://api.waterdata.usgs.gov
         type: text/html
       name: WDFN Support
-  description: 'These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.
-
-    '
+  description: These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.
   license:
     name: US Government work in the public domain
     url: https://creativecommons.org/publicdomain/zero/1.0/
   termsOfService: https://creativecommons.org/publicdomain/zero/1.0/
-  title: USGS Water Data OGC APIs agency-codes server API
+  title: USGS Water Data OGC Server API
   version: 0.56.0
   x-keywords:
   - geospatial
@@ -33,17 +31,14 @@ servers:
     '
   url: https://api.waterdata.usgs.gov/ogcapi/v0
 tags:
-- description: 'These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.
-
-    '
+- description: These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor measurements, discrete field measurements, metadata about monitoring locations, and more.
   externalDocs:
     description: information
     url: https://api.waterdata.usgs.gov
-  name: server
+  name: Server
 paths:
   /:
     get:
-      description: Landing page
       operationId: getLandingPage
       parameters:
       - $ref: '#/components/parameters/f'
@@ -61,10 +56,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: Landing page
       tags:
-      - server
+      - Server
   /collections:
     get:
-      description: Collections
       operationId: getCollections
       parameters:
       - $ref: '#/components/parameters/f'
@@ -82,10 +76,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: Collections
       tags:
-      - server
+      - Server
   /conformance:
     get:
-      description: API conformance definition
       operationId: getConformanceDeclaration
       parameters:
       - $ref: '#/components/parameters/f'
@@ -103,10 +96,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: API conformance definition
       tags:
-      - server
+      - Server
   /openapi:
     get:
-      description: This document
       operationId: getOpenapi
       parameters:
       - $ref: '#/components/parameters/f'
@@ -136,53 +128,9 @@ paths:
           $ref: '#/components/responses/default'
       summary: This document
       tags:
-      - server
+      - Server
 components:
-  parameters:
-    f:
-      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available.
-      explode: false
-      in: query
-      name: f
-      required: false
-      schema:
-        default: json
-        enum:
-        - json
-        - html
-        - jsonld
-        - csv
-        type: string
-      style: form
-    lang:
-      description: The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.
-      in: query
-      name: lang
-      required: false
-      schema:
-        default: en-US
-        enum:
-        - en-US
-        type: string
-  schemas:
-    Error:
-      properties:
-        error:
-          properties:
-            code:
-              description: Error code such as OVER_RATE_LIMIT, see https://api.data.gov/docs/developer-manual/#general-web-service-errors
-              type: string
-            message:
-              description: Error message
-              type: string
-          required:
-          - code
-          - message
-          type: object
-      type: object
   responses:
-    '200':
-      description: successful operation
     TooManyRequests429:
       content:
         application/json:
@@ -287,6 +235,50 @@ components:
           schema:
             $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
       description: Unexpected error
+    '200':
+      description: successful operation
+  parameters:
+    lang:
+      description: The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.
+      in: query
+      name: lang
+      required: false
+      schema:
+        default: en-US
+        enum:
+        - en-US
+        type: string
+    f:
+      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.  CSV is also available.
+      explode: false
+      in: query
+      name: f
+      required: false
+      schema:
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
+        - csv
+        type: string
+      style: form
+  schemas:
+    Error:
+      properties:
+        error:
+          properties:
+            code:
+              description: Error code such as OVER_RATE_LIMIT, see https://api.data.gov/docs/developer-manual/#general-web-service-errors
+              type: string
+            message:
+              description: Error message
+              type: string
+          required:
+          - code
+          - message
+          type: object
+      type: object
   securitySchemes:
     ApiKeyHeader:
       description: Providing your API key gives you higher rate limits when querying our APIs. You can obtain an API key at https://api.waterdata.usgs.gov/signup
