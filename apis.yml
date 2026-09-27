@@ -178,7 +178,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-agency-codes-api
-  name: USGS Water Services agency-codes API
+  name: USGS Water Services Agency Codes API
   description: Code identifying the agency or organization used for site information, data sources, and permitting
     agencies. Agency codes are fixed values assigned by the National Water Information System (NWIS).
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -193,7 +193,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-altitude-datums-api
-  name: USGS Water Services altitude-datums API
+  name: USGS Water Services Altitude Datums API
   description: The recommended vertical datum is NAVD88 (North American Vertical Datum of 1988) where applicable
     as stated in Office of Information Technical Memo 2002.01. NGVD29 (National Geodetic Vertical Datum of 1929)
     and NAVD88 are the only datums that can be converted on output. NWIS uses the North American Vertical Datum
@@ -211,7 +211,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-aquifer-codes-api
-  name: USGS Water Services aquifer-codes API
+  name: USGS Water Services Aquifer Codes API
   description: Local aquifers in USGS data are identified by an aquifer name and geohydrologic unit code (a three-digit
     number related to the age of the formation, followed by a 4 or 5 character abbreviation for the geologic unit
     or aquifer name). For the age of formation (aquifer age), generally the smaller the number represents the younger
@@ -233,7 +233,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-aquifer-types-api
-  name: USGS Water Services aquifer-types API
+  name: USGS Water Services Aquifer Types API
   description: Groundwater occurs in aquifers under two different conditions. Where water only partly fills an aquifer,
     the upper surface is free to rise and decline. These aquifers are referred to as unconfined (or water-table)
     aquifers. Where water completely fills an aquifer that is overlain by a confining bed, the aquifer is referred
@@ -251,7 +251,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-channel-measurements-api
-  name: USGS Water Services channel-measurements API
+  name: USGS Water Services Channel Measurements API
   description: Channel measurements taken as part of streamflow field measurements.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -265,7 +265,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-citations-api
-  name: USGS Water Services citations API
+  name: USGS Water Services Citations API
   description: Citations associated with water measurement methods.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -281,7 +281,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-combined-metadata-api
-  name: USGS Water Services combined-metadata API
+  name: USGS Water Services Combined Metadata API
   description: This endpoint combines metadata from timeseries and field measurements collections by site.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -295,7 +295,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-continuous-api
-  name: USGS Water Services continuous API
+  name: USGS Water Services Continuous API
   description: Continuous data are collected via automated sensors installed at a monitoring location. They are
     collected at a high frequency and often at a fixed 15-minute interval. Depending on the specific monitoring
     location, the data may be transmitted automatically via telemetry and be available on WDFN within minutes of
@@ -314,7 +314,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-coordinate-accuracy-codes-api
-  name: USGS Water Services coordinate-accuracy-codes API
+  name: USGS Water Services Coordinate Accuracy Codes API
   description: Appropriate code on the schedule to indicate the accuracy of the latitude-longitude values.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -328,7 +328,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-coordinate-datum-codes-api
-  name: USGS Water Services coordinate-datum-codes API
+  name: USGS Water Services Coordinate Datum Codes API
   description: Horizontal datum code for the latitude/longitude coordinates. There are currently more than 300 horizontal
     datums available for entry.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -343,7 +343,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-coordinate-method-codes-api
-  name: USGS Water Services coordinate-method-codes API
+  name: USGS Water Services Coordinate Method Codes API
   description: Methods used to determine latitude-longitude values.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -357,7 +357,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-counties-api
-  name: USGS Water Services counties API
+  name: USGS Water Services Counties API
   description: The name of the county or county equivalent (parish, borough, planning reagion, etc.) in which the
     site is located. List includes Census Bureau FIPS county codes, names and associated Country and State.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -372,7 +372,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-countries-api
-  name: USGS Water Services countries API
+  name: USGS Water Services Countries API
   description: FIPS country codes and names.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -388,7 +388,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-daily-api
-  name: USGS Water Services daily API
+  name: USGS Water Services Daily API
   description: Daily data provide one data value to represent water conditions for the day. Throughout much of the
     history of the USGS, the primary water data available was daily data collected manually at the monitoring location
     once each day. With improved availability of computer storage and automated transmission of data, the daily
@@ -410,7 +410,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-field-measurements-api
-  name: USGS Water Services field-measurements API
+  name: USGS Water Services Field Measurements API
   description: Field measurements are physically measured values collected during a visit to the monitoring location.
     Field measurements consist of measurements of gage height and discharge, and readings of groundwater levels,
     and are primarily used as calibration readings for the automated sensors collecting continuous data. They are
@@ -427,7 +427,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-field-measurements-metadata-api
-  name: USGS Water Services field-measurements-metadata API
+  name: USGS Water Services Field Measurements Metadata API
   description: This endpoint provides metadata about field measurement collections, including when the earliest
     and most recent observations for a parameter occurred at a monitoring location and its units.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -442,7 +442,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-hydrologic-unit-codes-api
-  name: USGS Water Services hydrologic-unit-codes API
+  name: USGS Water Services Hydrologic Unit Codes API
   description: 'Hydrologic units are geographic areas representing part or all of a surface drainage basin or distinct
     hydrologic feature identified by a unique number (HUC), and a name. The United States is divided and sub-divided
     into successively smaller hydrologic units which are classified into four levels: regions, sub-regions, accounting
@@ -460,7 +460,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-latest-continuous-api
-  name: USGS Water Services latest-continuous API
+  name: USGS Water Services Latest Continuous API
   description: This endpoint provides the most recent observation for each time series of continuous data. Continuous
     data are collected via automated sensors installed at a monitoring location. They are collected at a high frequency
     and often at a fixed 15-minute interval. Depending on the specific monitoring location, the data may be transmitted
@@ -480,7 +480,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-latest-daily-api
-  name: USGS Water Services latest-daily API
+  name: USGS Water Services Latest Daily API
   description: Daily data provide one data value to represent water conditions for the day. Throughout much of the
     history of the USGS, the primary water data available was daily data collected manually at the monitoring location
     once each day. With improved availability of computer storage and automated transmission of data, the daily
@@ -500,7 +500,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-latest-field-measurements-api
-  name: USGS Water Services latest-field-measurements API
+  name: USGS Water Services Latest Field Measurements API
   description: Field measurements are physically measured values collected during a visit to the monitoring location.
     Field measurements consist of measurements of gage height and discharge, and readings of groundwater levels,
     and are primarily used as calibration readings for the automated sensors collecting continuous data. They are
@@ -517,7 +517,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-medium-codes-api
-  name: USGS Water Services medium-codes API
+  name: USGS Water Services Medium Codes API
   description: Medium refers to the specific environmental medium from which the sample was collected. Medium type
     differs from site type because one site type, such as surface water, could have data for several media, such
     as water, bottom sediment, fish tissue, and others.
@@ -533,7 +533,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-method-categories-api
-  name: USGS Water Services method-categories API
+  name: USGS Water Services Method Categories API
   description: Categorical standards for methods describing the associated data's appropriateness for an intended
     use.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -548,7 +548,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-method-citations-api
-  name: USGS Water Services method-citations API
+  name: USGS Water Services Method Citations API
   description: Citation identifiers for water measurement methods.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -562,7 +562,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-methods-api
-  name: USGS Water Services methods API
+  name: USGS Water Services Methods API
   description: Water measurement or water-quality analytical methods. Codes and descriptions defining a method for
     calculating or measuring the value of a water quality or quantity parameter. Method codes are associated with
     one or many parameter codes.
@@ -579,7 +579,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-monitoring-locations-api
-  name: USGS Water Services monitoring-locations API
+  name: USGS Water Services Monitoring Locations API
   description: Location information is basic information about the monitoring location including the name, identifier,
     agency responsible for data collection, and the date the location was established. It also includes information
     about the type of location, such as stream, lake, or groundwater, and geographic information about the location,
@@ -598,7 +598,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-national-aquifer-codes-api
-  name: USGS Water Services national-aquifer-codes API
+  name: USGS Water Services National Aquifer Codes API
   description: National aquifers are the principal aquifers or aquifer systems in the United States, defined as
     regionally extensive aquifers or aquifer systems that have the potential to be used as a source of potable water.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -613,7 +613,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-parameter-codes-api
-  name: USGS Water Services parameter-codes API
+  name: USGS Water Services Parameter Codes API
   description: 'Parameter codes are 5-digit codes and associated descriptions used to identify the constituent measured
     and the units of measure. Some parameter code definitions include information about the sampling matrix, fraction,
     and methods used to measure the constituent. Some parameters are fixed-value (fxd) numeric codes having textual
@@ -631,7 +631,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-peaks-api
-  name: USGS Water Services peaks API
+  name: USGS Water Services Peaks API
   description: Annual peak flow values are the maximum instantaneous streamflow values recorded at a particular
     site for the entire water year from October 1 to September 30. Note that the annual peak flow value may not
     occur at the same time the maximum water level occurs due to conditions such as backwater, tidal fluctuations,
@@ -648,7 +648,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-reliability-codes-api
-  name: USGS Water Services reliability-codes API
+  name: USGS Water Services Reliability Codes API
   description: Code indicating the reliability of the data available for the site.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -662,7 +662,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-server-api
-  name: USGS Water Services server API
+  name: USGS Water Services Server API
   description: These APIs provide OGC-compliant interfaces to USGS water data, letting you download continuous sensor
     measurements, discrete field measurements, metadata about monitoring locations, and more.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -679,7 +679,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-site-types-api
-  name: USGS Water Services site-types API
+  name: USGS Water Services Site Types API
   description: The hydrologic cycle setting or a man-made feature thought to affect the hydrologic conditions measured
     at a site. Primary and secondary site types associated with data collection sites. All sites have a primary
     site type, and may additionally have a secondary site type that further describes the location.
@@ -695,7 +695,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-states-api
-  name: USGS Water Services states API
+  name: USGS Water Services States API
   description: State name or territory. Includes U.S. states and foreign entities classified under FIPS as 'Principal
     Administrative Divisions'.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -712,7 +712,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-statistic-codes-api
-  name: USGS Water Services statistic-codes API
+  name: USGS Water Services Statistic Codes API
   description: Statistic codes.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
   baseURL: https://waterservices.usgs.gov/nwis/iv/
@@ -726,7 +726,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-time-series-metadata-api
-  name: USGS Water Services time-series-metadata API
+  name: USGS Water Services Time Series Metadata API
   description: Daily data and continuous measurements are grouped into time series, which represent a collection
     of observations of a single parameter, potentially aggregated using a standard statistic, at a single monitoring
     location. This endpoint provides metadata about those time series, including their operational thresholds, units
@@ -743,7 +743,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-time-zone-codes-api
-  name: USGS Water Services time-zone-codes API
+  name: USGS Water Services Time Zone Codes API
   description: The ISO 8601 standard defines time zone offsets as a numerical value added to a local time to convert
     it to Coordinated Universal Time (UTC), either as +hh:mm or -hh:mm, or represented by the letter Z to explicitly
     indicate UTC. For example, +05:30 means 5 hours and 30 minutes ahead of UTC, while -08:00 means 8 hours behind
@@ -760,7 +760,7 @@ apis:
   - type: Website
     url: https://api.waterdata.usgs.gov/
 - aid: usgs-water:usgs-water-topographic-codes-api
-  name: USGS Water Services topographic-codes API
+  name: USGS Water Services Topographic Codes API
   description: The code that best describes the topographic setting in which the site is located. Topographic setting
     refers to the geomorphic features in the vicinity of the site.
   humanURL: https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/
@@ -777,7 +777,6 @@ apis:
 - name: USGS Water Services
   description: Water quality and level info for rivers and lakes
   humanURL: https://waterservices.usgs.gov/
-  baseURL: https://waterservices.usgs.gov/
   tags:
   - Science And Math
   properties:
