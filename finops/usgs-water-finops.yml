@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 specification: FinOps Framework
 specificationVersion: '1.0'
 schema: https://www.finops.org/framework/
@@ -161,13 +166,10 @@ apis:
 unitEconomics:
   - name: Cost per 1K Requests
     metric: internal_engineering_cost / (api_requests / 1000)
-    target: minimize via caching and efficient query patterns
   - name: Cache Hit Rate
     metric: cached_responses / total_requests
-    target: '>80% for daily-values and statistics endpoints'
   - name: Rate Limit Incident Rate
     metric: rate_limit_errors / total_requests
-    target: '<0.1% after API key registration and query optimization'
 riskNotes:
   - >-
     Legacy WaterServices (waterservices.usgs.gov) is scheduled for decommission in
