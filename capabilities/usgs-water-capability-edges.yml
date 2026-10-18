@@ -11,8 +11,19 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 4
+edge_count: 6
 edges:
+- tag: continuous
+  spec_file: usgs-water-continuous-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.75
+  evidence: 'GET /collections/continuous/items  Get Continuous values items; description: "download continuous
+    sensor measurements"'
+  reason: Continuous time-series sensor values from surface- and ground-water gauging stations are exactly
+    the output of a hydrometric monitoring network (BC-3860.70). Not utility-operated, but the capability
+    performed by the API is hydrometric data acquisition.
 - tag: monitoring-locations
   spec_file: usgs-water-monitoring-locations-api-openapi.yml
   capability_id: BC-3860.70
@@ -24,18 +35,28 @@ edges:
   reason: Catalogue of surface- and ground-water monitoring sites comprising the hydrometric monitoring
     network. Mapped to Hydrometric Monitoring; moderate confidence since it could also be read as geospatial
     records/master data.
-- tag: continuous
-  spec_file: usgs-water-continuous-api-openapi.yml
+- tag: field-measurements
+  spec_file: usgs-water-field-measurements-api-openapi.yml
   capability_id: BC-3860.70
   capability_id_l1: BC-3860
   capability_name: Hydrometric Monitoring
   confidence: 0.7
-  evidence: '''Get Continuous values items''; openapi description: ''letting you download continuous sensor
-    measurements, discrete field measurements, metadata about monitoring locations'''
-  reason: This tag serves continuous time-series sensor readings (stage, streamflow, groundwater level)
-    from the USGS monitoring network. That is the data output of operating surface- and ground-water monitoring
-    networks, i.e. BC-3860.70 Hydrometric Monitoring. Not full-confidence because the API only reads the
-    data rather than operating the network, and the operations are generic OGC Features endpoints.
+  evidence: 'GET /collections/field-measurements/items  Get Field measurements items; description: "discrete
+    field measurements"'
+  reason: Discrete field measurements (manual gauging/field readings at monitoring locations) are the
+    data product of surface- and ground-water monitoring networks, matching Hydrometric Monitoring. Moderate
+    confidence as the operations are generic feature reads.
+- tag: latest-continuous
+  spec_file: usgs-water-latest-continuous-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.7
+  evidence: 'GET /collections/latest-continuous/items  Get Latest continuous items; vendor: "real-time
+    and historical water data from over 1.5 million monitoring locations"'
+  reason: Latest real-time continuous sensor values from water monitoring stations are the live output
+    of a hydrometric monitoring network, matching BC-3860.70; confidence moderate given the generic OGC
+    read-only surface.
 - tag: latest-daily
   spec_file: usgs-water-latest-daily-api-openapi.yml
   capability_id: BC-3860.70
