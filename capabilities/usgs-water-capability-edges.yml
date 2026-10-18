@@ -1,0 +1,60 @@
+slug: usgs-water
+provider: USGS Water Services
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Power & Water Utilities
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: monitoring-locations
+  spec_file: usgs-water-monitoring-locations-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.72
+  evidence: '"Get Monitoring locations items" — "metadata about monitoring locations" across "over 1.5
+    million monitoring locations"'
+  reason: Catalogue of surface- and ground-water monitoring sites comprising the hydrometric monitoring
+    network. Mapped to Hydrometric Monitoring; moderate confidence since it could also be read as geospatial
+    records/master data.
+- tag: continuous
+  spec_file: usgs-water-continuous-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.7
+  evidence: '''Get Continuous values items''; openapi description: ''letting you download continuous sensor
+    measurements, discrete field measurements, metadata about monitoring locations'''
+  reason: This tag serves continuous time-series sensor readings (stage, streamflow, groundwater level)
+    from the USGS monitoring network. That is the data output of operating surface- and ground-water monitoring
+    networks, i.e. BC-3860.70 Hydrometric Monitoring. Not full-confidence because the API only reads the
+    data rather than operating the network, and the operations are generic OGC Features endpoints.
+- tag: latest-daily
+  spec_file: usgs-water-latest-daily-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.7
+  evidence: '"Get Latest daily values items" — "download continuous sensor measurements, discrete field
+    measurements, metadata about monitoring locations"'
+  reason: Serves the latest daily continuous-sensor values from USGS's water monitoring network, i.e.
+    surface/ground-water hydrometric observation data. Best fit is Hydrometric Monitoring under Water
+    Resource Management; confidence held moderate because the API is a public data-publication interface
+    rather than a utility's own operational system.
+- tag: latest-field-measurements
+  spec_file: usgs-water-latest-field-measurements-api-openapi.yml
+  capability_id: BC-3860.70
+  capability_id_l1: BC-3860
+  capability_name: Hydrometric Monitoring
+  confidence: 0.7
+  evidence: '"Get Latest field measurements items" — vendor: "discrete field measurements" from "over
+    1.5 million monitoring locations"'
+  reason: Discrete hydrologic field measurements (e.g. streamflow gaugings) published from the monitoring
+    network — hydrometric monitoring data. Moderate confidence as this is a data-dissemination API.
