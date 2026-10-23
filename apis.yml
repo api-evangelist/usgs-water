@@ -777,12 +777,16 @@ apis:
 - name: USGS Water Services
   description: Water quality and level info for rivers and lakes
   humanURL: https://waterservices.usgs.gov/
-  tags:
+  tags: []
+  tags_raw:
   - Science And Math
   properties:
   - type: Documentation
     url: https://waterservices.usgs.gov/
 common:
+- type: CapabilityMap
+  url: capabilities/usgs-water-capability-edges.yml
+  name: USGS Water Services Business Capability Map
 - type: AgenticAccess
   url: agentic-access/usgs-water-agentic-access.yml
 - type: DomainSecurity
